@@ -1,12 +1,12 @@
-echo "*.aux" >> .gitignore
-echo "*.bbl" >> .gitignore
-echo "*.bcf" >> .gitignore
-echo "*.blg" >> .gitignore
-echo "*.log" >> .gitignore
-echo "*.out" >> .gitignore
-echo "*.run.xml" >> .gitignore
-echo "*.synctex.gz" >> .gitignore
-echo "*.toc" >> .gitignore
-echo "*.lof" >> .gitignore
-echo "*.lot" >> .gitignore
-echo "*.lol" >> .gitignore
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.lol
