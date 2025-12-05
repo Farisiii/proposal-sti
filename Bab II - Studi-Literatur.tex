@@ -3,287 +3,353 @@
 % ==========================================
 \chapter{STUDI LITERATUR}
 \label{chap:studi-literatur}
-\section{Penulisan Gambar, Tabel, Rumus, dan Kode}
-\lipsum[1]
 
-\subsection{Gambar}
-Contoh gambar dapat dilihat pada Gambar \ref{gambar:jaringan}. Gambar dan judulnya diposisikan di tengah. Nomor gambar tidak diakhiri tanda titik. Gambar tersebut dibuat menggunakan aplikasi draw.io dan disimpan ke format PNG setelah dengan zoom setting pada angka 300\%. Ukuran gambar yang ditampilkan dapat diatur dengan mengubah nilai \textit{width} dalam sintaks \textit{includegraphics}.
+\section{Digitalisasi Dokumen}
+Digitalisasi dokumen adalah proses mengubah dokumen fisik menjadi format digital sehingga lebih mudah disimpan, ditemukan, dan diakses \autocite{sternad2023managingdms}. Transformasi ini menjadi penting karena organisasi modern membutuhkan alur kerja yang cepat, efisien, dan fleksibel, terutama dalam lingkungan kerja jarak jauh dan kolaboratif.
 
-\begin{figure}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
+Minat terhadap digitalisasi meningkat pesat secara global. Gambar \ref{fig:publikasi_scopus} menunjukkan jumlah publikasi terkait \textit{Document Management System} (DMS) pada basis data Scopus. Terlihat dua lonjakan besar, yaitu saat krisis finansial 2008 dan pandemi COVID-19 2020, menandakan bahwa digitalisasi menjadi solusi penting ketika proses kerja fisik terhambat \autocite{sternad2023managingdms}.
+
+\begin{figure}[H]
 	\centering
-  \captionsetup{justification=centering}
-    	\includegraphics[width=0.7\textwidth]{image/gambar1.png}
-	\caption{Contoh gambar jaringan}
-	\label{gambar:jaringan}
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/grafik publikasi kata kunci DMS.jpeg}
+	\caption{Jumlah publikasi dengan kata kunci ``Document Management System'' pada basis data Scopus \autocite{sternad2023managingdms}}
+	\label{fig:publikasi_scopus}
 \end{figure}
 
-Gambar umumnya tidak jelas atau kabur jika gambar tersebut:
-\begin{enumerate}[a.]
-  \item diperoleh dari hasil cropping pada suatu halaman buku atau situs web;
-  \item hasil pembesaran gambar yang gambar aslinya sebenarnya berukuran kecil; atau
-  \item disimpan dalam resolusi kecil
-\end{enumerate}
-Ketidakjelasan gambar ini dapat dilihat pada garis-garis diagram yang tidak tegas dan tulisan-tulisan dalam gambar yang tampak kabur dan kurang jelas terbaca.
+Keterbatasan dokumen fisik menjadi alasan utama digitalisasi dilakukan. Pencarian arsip kertas dapat menghabiskan 30--40\% waktu kerja dan rentan terhadap kehilangan maupun kerusakan \autocite{xiong2021sustainable}. Sebaliknya, dokumen digital dapat dicari dalam hitungan detik, diakses dari berbagai lokasi, serta dilindungi dengan enkripsi dan kontrol akses \autocite{sternad2023managingdms}. Digitalisasi juga mengurangi biaya penyimpanan fisik, biaya pencetakan, dan penggunaan kertas, sehingga berkontribusi pada efisiensi dan keberlanjutan lingkungan \autocite{Yousufi2023Exploring}.
 
-Untuk mendapatkan gambar yang tidak kabur (\textit{blur}), langkah-langkah berikut dapat digunakan:
-\begin{enumerate}[(a)]
-\item Gambar yang didapat di suatu pustaka atau referensi sebaiknya digambar ulang, misalnya menggunakan PowerPoint, Canva, Figma, draw.io, atau yang lainnya.
-\item Jika diagram atau ilustrasi digambar menggunakan draw.io, saat gambar disimpan ke format PNG atau JPG (\textit{export as}), lakukan \textit{zoom} ke minimal 300\% (\textit{the default value is} 100\%). 
-\item Jika diagram digambar dengan menggunakan PowerPoint, gambar dapat langsung di-\textit{copy-paste} ke Word.
-\end{enumerate}
+Dalam implementasinya, organisasi menghadapi tantangan seperti kebutuhan investasi awal, pelatihan pengguna, dan pemilihan teknologi yang tepat. Untuk itu, \textcite{Yousufi2023Exploring} mengusulkan tujuh langkah implementasi menuju lingkungan kerja \textit{paperless} sebagaimana ditunjukkan pada Gambar \ref{fig:paperless_steps}. Langkah-langkah ini menekankan pentingnya perencanaan, pemilihan solusi digital, dan evaluasi berkelanjutan.
 
-\subsection{Tabel}
-Tabel ada dua jenis, yaitu tabel yang bisa termuat dalam satu halaman dan tabel yang sangat panjang sehingga tidak muat dalam satu halaman.
-\subsubsection{Tabel yang Muat dalam Satu Halaman}
-Contoh tabel dapat dilihat pada Tabel \ref{tbl:harga1} dan \ref{tbl:harga2}. Tabel dan judulnya dibuat rata kiri dan judul tabel diletakkan di atas tabel. Usahakan tabel dapat ditulis dalam satu halaman, tidak terpotong ke halaman berikutnya.
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/Tujuh Langkah paperless.png}
+	\caption{Tujuh langkah menuju lingkungan kerja \textit{paperless} yang efisien \autocite{Yousufi2023Exploring}}
+	\label{fig:paperless_steps}
+\end{figure}
 
-\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-  \begin{tabular}{ | p{2cm} | p{2cm} | p{3cm} |}
-	\hline
-	Nama 	& Satuan 		& Harga \\
-	\hline
-	Buku 	& Exemplar	& 25000 \\
-	Komputer	& Unit		& 2500000 \\
-	Pensil	& Buah		& 118900 \\
-	\hline
-	\end{tabular}
-\caption{Tabel harga bahan pokok}
-\label{tbl:harga1}
-\end{table}
+Secara keseluruhan, digitalisasi dokumen tidak hanya menggantikan media kertas, tetapi mengubah cara organisasi mengelola informasi. Dokumen digital menawarkan akses yang lebih cepat, keamanan lebih baik, keawetan jangka panjang, serta dukungan terhadap proses bisnis yang gesit dan modern \autocite{Ogilvie2016Scientific}. Oleh karena itu, digitalisasi kini menjadi pilar penting dalam transformasi digital organisasi.
 
 
+\section{\textit{Optical Character Recognition} (OCR)}
+OCR merupakan perangkat lunak untuk mengonversi teks dan gambar cetak ke dalam format digital sehingga dapat digunakan oleh komputer \autocite{islam2017surveyopticalcharacterrecognition}. Lebih spesifik, OCR adalah proses konversi citra hasil pindai dari teks cetak menjadi teks yang dapat diproses oleh mesin, baik sebagai berkas teks biasa maupun format HTML \autocite{Borovikov2014ASO}.
 
-\begin{table}[t] % pilihan opsi yang disarankan: t = top, b = bottom, h = here
-	\begin{tabular}{ | l | c | r | }
-	\hline
-	Nama 	& Satuan 		& Harga \\
-	\hline
-	Buku 	& Exemplar	& 25000 \\
-	Komputer	& Unit		& 2500000 \\
-	Pensil	& Buah		& 118900 \\
-	\hline
-	\end{tabular}
-\caption{Tabel harga bahan sekunder}
-\label{tbl:harga2}
-\end{table}
+\subsection{Tahapan Utama dalam Proses OCR}
+Proses OCR tidak terjadi secara langsung, 
+melainkan melalui serangkaian tahap sistematis yang dirancang untuk 
+mengubah citra dokumen menjadi teks digital yang dapat diproses. 
+Menurut \textcite{islam2017surveyopticalcharacterrecognition}, proses ini 
+terbagi ke dalam enam fase utama sebagai berikut:
 
-% -- Example of importing table from external file --
-\subsubsection{Mengimpor Tabel dari Berkas Eksternal}
-
-Tabel \ref{tbl:harga3} diimpor dari berkas eksternal \textit{table/tabel1.tex} menggunakan perintah \textit{input}. 
-Dengan demikian, jika tabel tersebut perlu diubah, cukup mengubah pada berkas eksternal tersebut tanpa perlu mengubah pada berkas utama ini.
-
-\input table/tabel1.tex
-
-
-% -- Example of long table --
-\subsubsection{Tabel yang Sangat Panjang}
-Jika tabel terlalu panjang sehingga tidak muat dalam satu halaman, gunakan paket 
-\textit{longtable} untuk membuat tabel yang dapat terpotong ke halaman berikutnya, 
-seperti pada Tabel \ref{tbl:longtable1}.
-
-\begin{longtable}{@{\extracolsep{\fill}} l c r r}
-\caption{Comprehensive Data Table Example}\label{tbl:longtable1} \\
-\toprule
-\textbf{ID} & \textbf{Name} & \textbf{Score} & \textbf{Rank} \\
-\midrule
-\endfirsthead
-
-\caption{Comprehensive Data Table Example (lanjutan)} \\
-\toprule
-\textbf{ID} & \textbf{Name} & \textbf{Score} & \textbf{Rank} \\
-\midrule
-\endhead
-
-\midrule
-\multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}} \\
-%\bottomrule
-\endfoot
-
-\bottomrule
-\endlastfoot
-
-% === Table Data ===
-1 & Alice Smith & 89 & 5 \\
-2 & Bob Johnson & 93 & 3 \\
-3 & Carol Davis & 95 & 2 \\
-4 & Daniel Wilson & 88 & 6 \\
-5 & Eve Thompson & 97 & 1 \\
-6 & Frank Brown & 85 & 7 \\
-7 & Grace Lee & 91 & 4 \\
-8 & Henry Miller & 80 & 9 \\
-9 & Irene Garcia & 83 & 8 \\
-10 & Jack Robinson & 78 & 10 \\
-% Repeat with more rows to make it long
-11 & Kevin Harris & 76 & 11 \\
-12 & Laura Martin & 75 & 12 \\
-13 & Michael Clark & 74 & 13 \\
-14 & Natalie Lewis & 73 & 14 \\
-15 & Olivia Walker & 72 & 15 \\
-16 & Peter Hall & 71 & 16 \\
-17 & Quinn Allen & 70 & 17 \\
-18 & Rachel Young & 69 & 18 \\
-19 & Samuel King & 68 & 19 \\
-20 & Tina Wright & 67 & 20 \\
-21 & Uma Scott & 66 & 21 \\
-22 & Victor Green & 65 & 22 \\
-23 & Wendy Adams & 64 & 23 \\
-24 & Xavier Nelson & 63 & 24 \\
-25 & Yolanda Carter & 62 & 25 \\
-26 & Zachary Perez & 61 & 26 \\
-27 & Amelia Baker & 60 & 27 \\
-28 & Benjamin Rivera & 59 & 28 \\
-29 & Charlotte Rogers & 58 & 29 \\
-30 & David Murphy & 57 & 30 \\
-31 & Ethan Cooper & 56 & 31 \\
-32 & Fiona Reed & 55 & 32 \\
-33 & George Bailey & 54 & 33 \\
-34 & Hannah Cox & 53 & 34 \\
-35 & Isaac Howard & 52 & 35 \\
-36 & Julia Ward & 51 & 36 \\
-37 & Kyle Flores & 50 & 37 \\
-38 & Lily Bell & 49 & 38 \\
-39 & Mason Sanders & 48 & 39 \\
-40 & Nora Patterson & 47 & 40 \\
-41 & Owen Ramirez & 46 & 41 \\
-42 & Penelope Torres & 45 & 42 \\
-43 & Quentin Foster & 44 & 43 \\
-44 & Rebecca Gonzales & 43 & 44 \\
-45 & Sebastian Bryant & 42 & 45 \\
-46 & Taylor Alexander & 41 & 46 \\
-47 & Ursula Russell & 40 & 47 \\
-48 & Vincent Griffin & 39 & 48 \\
-49 & William Diaz & 38 & 49 \\
-50 & Zoe Simmons & 37 & 50 \\
-% (You can easily extend this list to hundreds of rows)
-\end{longtable}
-
-\subsubsection{Beberapa Contoh Penulisan Rumus atau Persamaan Matematika Menggunakan LaTeX Termasuk Penomorannya}
-Contoh rumus matematika dapat ditulis seperti pada Persamaan \ref{eq:contoh1} di bawah ini. 
-Penomoran persamaan diletakkan di sebelah kanan, dan rumus ditulis dalam mode \textit{display math}.
-\begin{equation}
-E = mc^2
-\label{eq:contoh1}
-\end{equation}
-
-Contoh lain penulisan rumus matematika yang lebih kompleks dapat ditulis seperti pada Persamaan \ref{eq:rumus2}.
-
-\begin{align}
-f(x) &= ax^2 + bx + c \\
-f'(x) &= \frac{d}{dx}(ax^2 + bx + c) \notag \\ % tidak menampilkan nomor pada baris ini
-      &= 2ax + b \label{eq:rumus2}
-\end{align}
-
-Jika rumus terlalu panjang untuk ditulis dalam satu baris, gunakan lingkungan \textit{multline} seperti pada Persamaan \ref{eq:rumus3} di bawah ini.
-\begin{multline} 
-y = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 + a_6x^6 + a_7x^7 \\
-    + a_8x^8 + a_9x^9 + a_{10}x^{10} \label{eq:rumus3}
-\end{multline}
-
-Jika ada penurunan rumus yang terdiri dari beberapa baris, namun tidak memerlukan penomoran pada setiap baris, gunakan lingkungan \textit{align*}, misalnya:
-
-\begin{align*} 
-S &= \sum_{i=1}^{n} i^2 \\
-  &= 1^2 + 2^2 + 3^2 + \cdots + n^2 \\
-  &= \frac{n(n + 1)(2n + 1)}{6}
-\intertext{Contoh lainnya adalah rumus untuk mencari nilai rata-rata fungsi $f(x)$ pada interval $[p, q]$:}
-\bar{f} &= \frac{1}{q - p} \int_{p}^{q} f(x) \, dx \\
-        &= \frac{1}{q - p} \int_{p}^{q} (ax^2 + bx + c) \, dx \\
-        &= \frac{1}{q - p} \left[ \frac{a}{3}x^3 + \frac{b}{2}x^2 + cx \right]_p^q \\
-        &= \frac{a(q^3 - p^3)}{3(q - p)} + \frac{b(q^2 - p^2)}{2(q - p)} + c \label{eq:rumus4}
-\end{align*}
-
-
-
-\subsection{Algoritma, Pseudocode, atau Kode}
-Contoh penulisan algoritma atau pseudocode dapat ditulis seperti pada Kode \ref{alg:contoh1} di bawah ini. 
-Gunakan paket \textit{listings} untuk menulis source code dalam bahasa pemrograman tertentu, seperti pada Kode \ref{lst:contoh1}. 
-
-
-% -- Example of pseudocode and source code listing --
-% -- Gunakan minipage agar listing tidak terpotong ke halaman berikutnya --
-\begin{minipage}{\textwidth} 
-\begin{lstlisting}[frame=lines, captionpos=t, caption={Contoh pseudocode}, label={alg:contoh1}]
-ALGORITHM HelloWorld
-   PRINT "Hello, World!"
-END ALGORITHM
-\end{lstlisting}
-\end{minipage}
-
-\begin{minipage}{\textwidth}
-\begin{lstlisting}[language=Python, frame=single, caption={Contoh source code Python}, captionpos=t, label={lst:contoh1}]
-def hello_world():
-    print("Hello, World!")       
-hello_world()
-\end{lstlisting}
-\end{minipage}
-
-
-\section{Beberapa Kesalahan Penulisan yang Sering Terjadi}
-\subsection{Penggunaan Kata "di mana" atau "dimana"}
-Banyak yang menuliskan kata "di mana" atau "dimana" sebagai pengganti kata "which" dalam bahasa Inggris. 
-Padahal, penggunaan kata "di mana" atau "dimana" tidak tepat dalam konteks tersebut. Demikian juga untuk kata serupa, misalnya "yang mana".
-Kata "di mana" atau "dimana" ini harus diganti dengan kata lain, seperti "dengan", "tempat", "yang", dan sebagainya tergantung kalimatnya.
-Penjelasan lengkap dapat dilihat pada \autocite{BPBI}.
-
-\subsection{Penggunaan Kata "sedangkan" dan "sehingga"}
-
-\begin{table}[t]
-  \begin{tabular}{|c|l|l|}
-  \hline
-  Kata & Salah & Benar \\ \hline
-  sedangkan & \begin{tabular}[c]{@{}c@{}}Sedangkan sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna,\\ sedangkan sistem baru belum siap.\end{tabular} \\ \hline
-  sehingga & \begin{tabular}[c]{@{}c@{}}Sehingga sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna sehingga\\ sistem baru belum siap.\end{tabular} \\ \hline
-  \end{tabular}
-  \caption{Contoh penggunaan kata "sedangkan" dan "sehingga"}
-  \label{tbl:sedangkan_sehingga}
-\end{table}
-
-Kata "sedangkan" dan "sehingga" adalah kata hubung atau konjungsi. 
-Konjungsi adalah kata atau ungkapan yang menghubungkan satuan bahasa 
-(kata, frasa, klausa, dan kalimat). 
-Konjungsi dapat dibagi menjadi konjungsi intrakalimat dan antarkalimat.  
-Kata "sedangkan" menghubungkan dua klausa yang bersifat kontrasif, 
-sedangkan "sehingga" menghubungkan dua klausa yang bersifat kausal. 
-Dalam ragam formal, kata hubung “sedangkan” dan “sehingga” hanya dapat digunakan 
-sebagai konjungsi intrakalimat sehingga kedua konjungsi itu \textbf{tidak dapat diletakkan pada awal kalimat}.
-Selain itu, penggunaan kata "sedangkan" harus didahului oleh koma (,), sedangkan kata "sehingga" tidak perlu didahului oleh koma (,).
-Contoh penggunaan yang benar dan salah dapat dilihat pada Tabel \ref{tbl:sedangkan_sehingga}.
-
-
-\subsection{Penggunaan Istilah yang Tidak Baku}
-Ada beberapa istilah yang sering digunakan dalam pembicaraan sehari-hari, tetapi tidak baku dalam penulisan ilmiah.
-Beberapa istilah tersebut antara lain:
 \begin{enumerate}
-  \item analisa $\rightarrow$ analisis
-  \item eksisting atau existing $\rightarrow$ yang ada atau saat ini
-  \item bisnis proses $\rightarrow$ proses bisnis
-  \item user $\rightarrow$ pengguna
-  \item system $\rightarrow$ sistem
-  \item database $\rightarrow$ basis data
-  \item aktifitas $\rightarrow$ aktivitas
-  \item efektifitas $\rightarrow$ efektivitas
-  \item sosial media $\rightarrow$ media sosial
+	\item \textit{Image acquisition}
+	\par Memperoleh citra digital dan mengubahnya ke format yang dapat 
+	diproses melalui kuantisasi, binarisasi, dan kompresi.
+	
+	\item \textit{Preprocessing}
+	\par Meningkatkan kualitas visual dengan menghilangkan \textit{noise}, 
+	memisahkan teks dari latar belakang (\textit{thresholding}), melakukan 
+	koreksi kemiringan (\textit{deskew}), serta menerapkan operasi 
+	morfologi.
+	
+	\item \textit{Character segmentation}
+	\par Memisahkan teks menjadi karakter individual menggunakan teknik 
+	seperti analisis komponen terhubung atau profil proyeksi.
+	
+	\item \textit{Feature extraction}
+	\par Mengekstraksi fitur unik yang membedakan karakter, baik yang bersifat 
+	geometris (\textit{loop}, \textit{stroke}) maupun statistik 
+	(\textit{moments}).
+	
+	\item \textit{Character classification}
+	\par Memetakan fitur ke kategori karakter tertentu menggunakan pendekatan 
+	struktural maupun statistik, seperti Bayesian dan \textit{neural network}.
+	
+	\item \textit{Post-processing}
+	\par Meningkatkan akurasi keluaran melalui penggabungan beberapa 
+	\textit{classifier}, analisis konteks, serta pemanfaatan kamus dan model 
+	probabilistik sehingga menghasilkan teks yang lebih akurat dan konsisten.
 \end{enumerate}
 
-\subsection{Pemisah Desimal dan Ribuan}
-Tanda pemisah desimal dalam bahasa Indonesia adalah tanda koma, contoh:
+
+\subsection{Perkembangan \textit{Optical Character Recognition} Berbasis \textit{Deep Learning}}
+
+Perkembangan OCR mengalami peningkatan signifikan setelah hadirnya pendekatan \textit{deep learning}. OCR berbasis \textit{deep learning} memanfaatkan \textit{neural network} yang mampu mempelajari pola langsung dari data dalam jumlah besar. Teknologi seperti \textit{Convolutional Neural Network} (CNN), \textit{Convolutional Recurrent Neural Network} (CRNN), dan \textit{Transformer} menghasilkan peningkatan besar dalam akurasi serta kemampuan generalisasi. Model-model tersebut mampu memahami struktur visual dan konteks teks secara lebih mendalam sehingga kinerjanya melampaui metode OCR konvensional.
+
+CNN menjadi fondasi utama dalam OCR modern. Menurut \textcite{oshea2015introductionconvolutionalneuralnetworks}, CNN dirancang untuk memproses data visual dengan memanfaatkan struktur alami gambar. CNN tersusun atas neuron yang memiliki tiga dimensi, yaitu tinggi, lebar, dan kedalaman. Berbeda dengan \textit{neural network} standar, setiap neuron tidak terhubung dengan seluruh neuron pada lapisan sebelumnya. Setiap neuron hanya memproses area kecil pada gambar yang disebut \textit{local receptive field}. Pembatasan cakupan ini membuat jumlah parameter jauh lebih sedikit sehingga proses pelatihan menjadi lebih efisien dan lebih mudah distabilkan.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/CNN.png}
+	\caption{Arsitektur CNN Sederhana \autocite{oshea2015introductionconvolutionalneuralnetworks}}
+	\label{gambar: Arsitektur CNN Sederhana}
+\end{figure}
+
+Secara umum, CNN terdiri atas tiga komponen utama, yaitu \textit{convolutional layer}, \textit{pooling layer}, dan \textit{fully-connected layer}. Ketiganya bekerja secara bertahap untuk mendeteksi pola dasar, mereduksi kompleksitas, dan menghasilkan prediksi akhir berdasarkan fitur yang telah terbentuk. Penjelasan lebih lanjut sebagai berikut:
+
 \begin{enumerate}
-  \item (Salah) Akurasi naik menjadi 50.6\% 
-  \item (Benar) Akurasi naik menjadi 50,6\% 
+	\item \textit{Convolutional layer}
+	\par Lapisan ini berfungsi mendeteksi pola visual dasar seperti tepi, garis, sudut, dan lengkungan. Setiap \textit{filter} atau \textit{kernel} diterapkan pada seluruh area gambar melalui proses pergeseran untuk mengidentifikasi pola tertentu. Setiap kernel menghasilkan \textit{activation map} dua dimensi yang merepresentasikan lokasi dan intensitas pola tersebut \autocite{oshea2015introductionconvolutionalneuralnetworks}. Penggunaan beberapa kernel memungkinkan model mengenali berbagai fitur visual secara bersamaan.
+	
+	\item \textit{Pooling layer}
+	\par Lapisan ini berfungsi mereduksi ukuran \textit{feature map}. Reduksi dilakukan melalui proses \textit{downsampling} pada dimensi spasial, misalnya dengan \textit{max pooling} atau \textit{average pooling}. \textcite{oshea2015introductionconvolutionalneuralnetworks} menjelaskan bahwa proses ini mengurangi jumlah parameter sekaligus meningkatkan ketahanan model terhadap variasi kecil pada gambar. Pooling membantu mempertahankan informasi penting sambil membuang detail yang kurang relevan.
+	
+	\item \textit{Fully-connected layer}
+	\par Lapisan ini berfungsi menghasilkan prediksi kelas berdasarkan fitur yang telah diekstraksi oleh lapisan sebelumnya. Lapisan ini tersusun atas neuron yang terhubung penuh ke neuron pada dua lapisan yang berdekatan, serupa dengan struktur \textit{neural network} standar. Lapisan ini mengubah representasi fitur menjadi keputusan akhir, misalnya memetakan citra karakter ke kelas tertentu dalam konteks OCR.
 \end{enumerate}
 
-\subsection{Daftar atau \textit{List}}
-Ada beberapa aturan penulisan daftar atau \textit{list} yang perlu diperhatikan, antara lain:
-\begin{enumerate}[a)]
-\item Jika memungkinkan, hindari penggunaan “bullet points” atau sejenisnya. Sebaiknya, gunakan angka (1, 2, 3, ...) atau huruf (a, b, c, …). Dengan demikian, pembaca dapat dengan mudah melihat jumlah \textit{item} atau \textit{list}. 
-\item Jika dalam daftar hanya ada satu item, tidak perlu menggunakan nomor urut.
-\item Penjelasan atau deskripsi suatu item sebaiknya menyatu dengan judul item tersebut, tidak berbeda halaman. Contoh yang salah: judul item ada di halaman 10, namun deskripsinya di halaman 11. Sebaiknya pindahkan judul tersebut ke halaman 11.
-\item Jika penjelasan atau deskripsi suatu item cukup panjang, misalnya lebih dari 1 halaman atau terdiri atas beberapa paragraf, sebaiknya setiap item tersebut dijadikan judul subbab, kecuali jika level subbab sudah mencapai level 4. 
+\vspace{12pt}
+Seiring meningkatnya kebutuhan untuk mengenali teks yang berbentuk urutan, diperlukan model yang tidak hanya memahami pola visual, tetapi juga hubungan antar karakter. Kebutuhan tersebut mendorong lahirnya \textit{Convolutional Recurrent Neural Network} (CRNN). CRNN menggabungkan kekuatan CNN untuk ekstraksi fitur visual, RNN untuk pemodelan urutan, dan \textit{Connectionist Temporal Classification} (CTC) sebagai mekanisme transkripsi yang tidak memerlukan segmentasi karakter secara manual.
+
+Menurut \textcite{shi2015endtoendtrainableneuralnetwork}, CRNN umumnya tersusun atas tiga komponen utama, yaitu \textit{convolutional layers}, \textit{Bidirectional Long Short-Term Memory} (BLSTM) layers, dan \textit{transcription layer}. Penjelasan lengkapnya sebagai berikut:
+
+\begin{enumerate}
+	\item \textit{Convolutional layers}  
+	Lapisan ini bertugas mengekstraksi pola visual karakter sebagaimana pada CNN. \textcite{shi2015endtoendtrainableneuralnetwork} menjelaskan bahwa lapisan konvolusi secara otomatis menghasilkan urutan vektor fitur dari gambar \textit{input}. Setiap vektor fitur diperoleh dari kolom \textit{feature map} yang diekstraksi secara berurutan dari kiri ke kanan. Proses ini mengubah citra dua dimensi menjadi rangkaian fitur satu dimensi yang siap diproses oleh lapisan rekuren.
+	
+	\item BLSTM  
+	\par BLSTM memproses urutan fitur dari dua arah sekaligus, yaitu dari kiri ke kanan dan dari kanan ke kiri. \textcite{huang2015bidirectionallstmcrfmodelssequence} menjelaskan bahwa pendekatan dua arah efektif dalam menangkap ketergantungan jangka panjang, terutama ketika karakter memiliki bentuk mirip atau ketika konteks dari masa depan membantu memperjelas prediksi. BLSTM memanfaatkan struktur LSTM yang mampu menyimpan informasi penting melalui mekanisme \textit{input gate}, \textit{forget gate}, dan \textit{output gate}. Mekanisme ini membuat model mampu mempelajari ketergantungan jangka pendek maupun jangka panjang pada data berurutan.
+	
+	\item CTC
+	\par Lapisan transkripsi ini menghasilkan urutan karakter tanpa memerlukan segmentasi eksplisit. CTC mendefinisikan probabilitas kondisional untuk urutan label berdasarkan prediksi per-frame dan mengabaikan posisi pasti setiap label \autocite{shi2015endtoendtrainableneuralnetwork}. Dengan demikian, model dapat dilatih hanya dengan pasangan gambar dan teks utuh tanpa menunjukkan lokasi setiap karakter. \textcite{shi2015endtoendtrainableneuralnetwork} menyatakan bahwa fungsi objektif pada CRNN menggunakan \textit{negative log-likelihood} dari probabilitas urutan tersebut sehingga kebutuhan anotasi menjadi jauh lebih sederhana dan efisien.
 \end{enumerate}
 
-\subsection{Penggunaan Kata "masing-masing" dan "setiap"}
-Kata “masing-masing” digunakan di belakang kata yang diterangkan, misalnya 
-"Setiap proses menggunakan algoritma masing-masing". Kata “tiap-tiap” atau “setiap”
-ditempatkan di depan kata yang diterangkan, misalnya
-"Setiap proses menggunakan algoritma tertentu".
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.8\textwidth]{image/CRNN.png}
+	\caption{Arsitektur CRNN \autocite{shi2015endtoendtrainableneuralnetwork}}
+	\label{gambar: Arsitektur CRNN}
+\end{figure}
+
+Menurut \textcite{shi2015endtoendtrainableneuralnetwork}, CRNN mampu mengenali teks dengan panjang bervariasi tanpa perlu menentukan panjang keluaran sejak awal. CRNN dapat menerima gambar dengan dimensi berbeda dan menghasilkan prediksi dengan panjang yang menyesuaikan kontennya. Kemampuan ini sangat penting karena teks di dunia nyata memiliki panjang yang sangat beragam, mulai dari kata tunggal hingga kalimat panjang. \textcite{ghojogh2023recurrentneuralnetworkslong} menambahkan bahwa LSTM, yang menjadi komponen inti CRNN, dirancang khusus untuk mempelajari ketergantungan jangka pendek dan jangka panjang. LSTM mencapai hal tersebut melalui mekanisme gerbang yang mengatur informasi mana yang perlu disimpan, diperbarui, atau dibuang sepanjang tahapan pemrosesan urutan.
+
+Fase selanjutnya dalam pengembangan OCR ditandai oleh pemanfaatan arsitektur \textit{Transformer}. Arsitektur ini mulai mengambil alih peran CNN dan RNN dengan memperkenalkan mekanisme \textit{self-attention}. Menurut \textcite{li2022trocrtransformerbasedopticalcharacter}, \textit{Transformer} mampu memodelkan hubungan global antarbagian gambar dengan memecah gambar menjadi potongan kecil (\textit{patches}), mengubahnya menjadi vektor, serta menambahkan \textit{positional embedding} untuk mempertahankan informasi posisi. Pemrosesan berbasis \textit{self-attention} ini memberikan pemahaman konteks visual yang lebih menyeluruh, terutama pada \textit{scene text} yang memiliki latar belakang kompleks.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/transformerOCR.png}
+	\caption{Arsitektur OCR Berbasis \textit{Transformer} \autocite{li2022trocrtransformerbasedopticalcharacter}}
+	\label{gambar: Arsitektur OCR Berbasis Transformer}
+\end{figure}
+
+\textcite{vaswani2023attentionneed} menjelaskan bahwa \textit{self-attention} bekerja dengan memetakan \textit{query} dan pasangan \textit{key-value} menjadi keluaran yang dihitung sebagai penjumlahan berbobot dari \textit{values}. Mekanisme ini memungkinkan model menghubungkan elemen-elemen input tanpa batasan jarak atau ketergantungan sekuensial seperti pada RNN. \textcite{islam2023recentadvancesvisiontransformer} menegaskan bahwa Vision Transformers (ViT) mampu menangkap ketergantungan jangka panjang dalam konteks global melalui mekanisme \textit{self-attention}, memberikan representasi visual yang tidak dimiliki arsitektur konvolusional tradisional.
+
+Model OCR berbasis \textit{Transformer} juga memperoleh keunggulan melalui integrasi \textit{pretrained vision models} seperti ViT serta \textit{pretrained language models}. \textcite{li2022trocrtransformerbasedopticalcharacter} menjelaskan bahwa TrOCR menggabungkan \textit{image Transformer} dan \textit{text Transformer} yang telah dilatih pada data tak berlabel berskala besar, sehingga keseluruhan proses pengenalan teks dapat dilakukan secara \textit{end-to-end} tanpa memerlukan CTC atau \textit{language model} tambahan.
+
+\textcite{dosovitskiy2021imageworth16x16words} menyatakan bahwa ViT tidak memiliki \textit{image-specific inductive biases} seperti translational invariance atau lokalitas seperti pada CNN. Ketiadaan bias ini membuat \textit{Transformer} lebih fleksibel dalam menangani variasi bentuk teks. \textcite{li2022trocrtransformerbasedopticalcharacter} juga menekankan bahwa TrOCR menghilangkan ketergantungan terhadap jaringan konvolusional dan tidak memperkenalkan \textit{inductive bias} khusus gambar, sehingga model lebih mudah diimplementasikan, lebih sederhana dipelihara, dan mampu menangani \textit{printed text}, \textit{handwritten text}, maupun \textit{scene text}.
+
+\section{\textit{Document Layout Analysis} (DLA)}
+
+DLA merupakan tahapan awal yang sangat penting dalam sistem pemahaman dokumen \autocite{BinmakhashenDLA}. DLA berfungsi mendeteksi dan memberikan anotasi pada struktur fisik dokumen, serta memahami pengaturan elemen-elemen di dalamnya \autocite{shehzadi2024hybridapproach}. Tujuan utamanya adalah memudahkan proses analisis selanjutnya dengan mengidentifikasi blok-blok dokumen yang memiliki keseragaman serta menentukan hubungan antarblok tersebut \autocite{BinmakhashenDLA}. Dengan kemampuannya mengubah dokumen tidak terstruktur menjadi format terstruktur, DLA berperan sebagai komponen utama dalam \textit{document parsing} untuk mendukung proses identifikasi dan ekstraksi data \autocite{shehzadi2024hybridapproach}.
+
+\subsection{Aspek Utama dalam DLA}
+Menurut \textcite{shehzadi2024hybridapproach}, DLA terbagi menjadi dua aspek pokok:
+
+\begin{enumerate}
+	\item \textit{Physical layout analysis}
+	\par Berfokus pada identifikasi dan pengelompokan elemen-elemen fisik halaman secara spasial, seperti teks, gambar, dan tabel.
+	
+	\item \textit{Logical layout analysis}
+	\par Memberikan makna semantik pada elemen-elemen tersebut, misalnya judul, paragraf, dan \textit{header}, serta memahami hubungan hierarki dan urutan pembacaannya.
+\end{enumerate}
+
+\vspace{12pt}
+Gambar \ref{fig:Contoh Hasil DLA} menunjukkan contoh hasil DLA pada sebuah halaman dokumen. Terlihat bahwa dokumen telah tersegmentasi menjadi beberapa wilayah yang diberi label sesuai jenis kontennya. Segmentasi seperti ini memungkinkan sistem memahami struktur dokumen secara hierarkis untuk pemrosesan lebih lanjut.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.7\textwidth]{image/exampleDLA.jpg}
+	\caption{Contoh Hasil DLA}
+	\label{fig:Contoh Hasil DLA}
+\end{figure}
+
+\subsection{Kerangka Kerja Umum DLA}
+
+Menurut \textcite{BinmakhashenDLA}, terdapat lima fase pokok dalam kerangka kerja DLA, yaitu:
+
+\begin{enumerate}
+	\item \textit{Preprocessing} \\
+	Fase ini mengubah gambar dokumen mentah menjadi gambar yang siap diproses. Prosesnya meliputi pembersihan gambar, binerisasi, dan koreksi kemiringan. Tujuannya untuk mengurangi efek negatif akibat kerusakan alami maupun teknis.
+	
+	\item \textit{Analysis parameter estimation} \\
+	Fase ini menentukan parameter penting untuk mengendalikan proses DLA. Parameter terbagi menjadi:
+	\begin{enumerate}
+		\item \textit{Model-driven parameters}, misalnya jumlah \textit{node} pada ANN.
+		\item \textit{Data-driven parameters}, misalnya rata-rata jarak antarbaris, jarak antarkata, atau tinggi karakter.
+	\end{enumerate}
+	
+	\item \textit{Layout analysis} \\
+	Ini merupakan inti dari DLA, yaitu segmentasi halaman menjadi wilayah bermakna. Terdapat tiga strategi pokok:
+	\begin{enumerate}
+		\item \textit{Bottom-up}: Dimulai dari elemen kecil seperti piksel atau komponen kecil, lalu digabungkan menjadi zona besar.
+		\item \textit{Top-down}: Dimulai dari zona besar, lalu dipecah menjadi zona kecil berdasarkan hubungan atau keseragaman.
+		\item \textit{Hybrid}: Kombinasi kedua strategi untuk menangani tata letak kompleks.
+	\end{enumerate}
+	
+	\item \textit{Post-processing} \\
+	Fase opsional untuk meningkatkan dan menggeneralisasi hasil segmentasi agar lebih akurat dan kompatibel terhadap berbagai jenis dokumen.
+	
+	\item \textit{Performance evaluation} \\
+	Fase evaluasi yang mencakup:
+	\begin{enumerate}
+		\item \textit{Physical analysis}, yaitu membandingkan hasil segmentasi dengan \textit{ground-truth}.
+		\item \textit{Logical analysis}, yaitu memberi label semantik seperti paragraf, tabel, atau gambar.
+	\end{enumerate}
+\end{enumerate}
+
+\vspace{12pt}
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/frameworkDLA.png}
+	\caption{Kerangka Kerja DLA secara Umum \autocite{BinmakhashenDLA}}
+	\label{fig:Kerangka Kerja secara Umum}
+\end{figure}
+
+\subsection{Perkembangan DLA}
+Seiring perkembangan teknologi, metode yang digunakan dalam DLA mengalami perubahan signifikan, mulai dari pendekatan berbasis aturan hingga arsitektur \textit{deep learning}. Menurut \cite{shehzadi2024hybridapproach}, evolusi ini dapat dibagi menjadi tiga era utama. Setiap tahap tidak hanya meningkatkan akurasi deteksi elemen dokumen, tetapi juga memperluas kemampuan sistem dalam menangani variasi \textit{layout} yang semakin kompleks. Adapun ketiga tahap perkembangan tersebut adalah sebagai berikut:
+
+\begin{enumerate}
+	\item \textit{Heuristic Rule-Based} DLA
+	\par Pada tahap awal, DLA didominasi oleh metode \textit{heuristic rule-based} yang digunakan sebelum berkembangnya \textit{deep learning}.
+	\begin{enumerate}
+		\item Metode \textit{bottom-up} mengelompokkan piksel atau komponen kecil melalui proses seperti \textit{clustering} untuk membentuk area yang seragam. Pendekatan ini mampu menangani \textit{layout} yang rumit, namun membutuhkan komputasi tinggi.
+		\item Metode \textit{top-down} memecah citra dokumen secara bertahap hingga terbentuk wilayah-wilayah homogen. Metode ini lebih cepat, tetapi kurang fleksibel dan hanya optimal untuk jenis dokumen tertentu.
+		\item Metode \textit{hybrid} menggabungkan kelebihan \textit{bottom-up} dan \textit{top-down} sehingga lebih seimbang dalam kecepatan dan akurasi.
+	\end{enumerate}
+	
+	\vspace{12pt}
+	Meskipun bermanfaat pada dokumen sederhana, metode heuristik cenderung kurang adaptif terhadap variasi \textit{layout} yang kompleks dan semakin jarang digunakan setelah hadirnya \textit{deep learning}.
+	
+	\item \textit{Deep Learning-Based} DLA
+	\par Munculnya \textit{deep learning} membawa peningkatan besar terhadap akurasi dan efisiensi analisis dokumen. Model seperti \textit{Faster R-CNN} membuka peluang untuk deteksi objek pada dokumen, sedangkan \textit{Mask R-CNN} menjadi tolok ukur baru dalam segmentasi \textit{layout}, terutama pada dokumen dengan struktur padat seperti koran. \textit{RetinaNet} turut digunakan untuk mendeteksi kata atau teks tertentu. Pada analisis tabel, \textit{DeepDeSRT} memanfaatkan transformasi citra dan \textit{fully convolutional network} dengan mekanisme \textit{skip pooling} guna memahami struktur tabel secara lebih detail. Secara keseluruhan, pendekatan CNN meningkatkan kemampuan sistem dalam memproses \textit{layout} dokumen yang beragam.
+	
+	\item \textit{Transformer-Based} DLA
+	\par Perkembangan terbaru ditandai oleh pemanfaatan arsitektur \textit{Transformer} yang mengandalkan mekanisme \textit{self-attention} dan \textit{positional embedding} untuk memahami konteks global dokumen. Tidak seperti CNN yang fokus pada fitur lokal, \textit{Transformer} dapat mengintegrasikan informasi visual, tekstual, dan tata letak secara terpadu. Model seperti \textit{DiT} meningkatkan kemampuan klasifikasi dan deteksi tabel melalui pelatihan \textit{self-supervised}. Arsitektur \textit{encoder--decoder} seperti \textit{TILT} memproses ketiga modalitas secara bersamaan, sementara \textit{LayoutLMv3} memperkuat representasi dokumen melalui pembelajaran multimodal. Namun, beberapa model seperti \textit{DINO} masih menghadapi tantangan dalam mendeteksi objek kecil seperti judul halaman, \textit{header}, atau \textit{footer}. Penelitian terbaru berfokus pada peningkatan mekanisme \textit{query} dan strategi \textit{matching} untuk mengatasi keterbatasan tersebut.
+\end{enumerate}
+
+
+\section{\textit{Document Parsing}}
+
+Menurut \textcite{zhang2025documentparsingunveiledtechniques}, \textit{document parsing} adalah teknologi esensial untuk mengonversi dokumen tidak terstruktur dan semi-terstruktur, seperti kontrak, makalah akademik, dan faktur, menjadi data terstruktur yang dapat dibaca mesin. Teknologi ini juga dikenal sebagai \textit{document content extraction}. Tujuannya adalah mengekstrak elemen-elemen seperti teks, persamaan matematis, tabel, dan gambar dari berbagai \textit{input} sambil mempertahankan hubungan strukturalnya. Konten yang diekstrak kemudian ditransformasikan ke dalam format terstruktur, seperti Markdown atau JSON, yang memfasilitasi integrasi ke dalam alur kerja modern.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/document parsing1.png}
+	\caption{Pendekatan Utama pada \textit{Document Parsing} \autocite{zhang2025documentparsingunveiledtechniques}}
+	\label{fig:document parsing}
+\end{figure}
+
+\textcite{zhang2025documentparsingunveiledtechniques} mengidentifikasi dua pendekatan utama dalam \textit{document parsing} yang digunakan untuk mencapai konversi dari dokumen tidak terstruktur menjadi data terstruktur, seperti diilustrasikan pada Gambar \ref{fig:document parsing}, yaitu:
+
+\begin{enumerate}
+	\item \textit{Modular pipeline system}
+	\par Sistem ini melibatkan proses bertahap dan terpisah, serta terdiri atas beberapa komponen utama:
+	\begin{enumerate}
+		\item \textit{Layout analysis}: Mendeteksi elemen struktural dokumen, seperti blok teks, paragraf, judul, gambar, tabel, dan ekspresi matematis, beserta koordinat spasial dan urutan bacanya.
+		\item \textit{Content extraction}:
+		\begin{enumerate}
+			\item \textit{Text extraction}: Menggunakan OCR untuk mengonversi teks dalam gambar dokumen menjadi teks yang dapat dibaca mesin.
+			\item \textit{Mathematical expression extraction}: Mendeteksi dan mengonversi simbol serta struktur matematis ke format standar, seperti \LaTeX{} atau MathML.
+			\item \textit{Table data and structure extraction}: Mengenali struktur tabel dan menggabungkan data yang diekstrak dengan hasil OCR.
+			\item \textit{Chart recognition}: Mengidentifikasi jenis diagram dan mengekstrak data serta hubungan struktural.
+		\end{enumerate}
+		\item \textit{Relation integration}: Menggabungkan elemen-elemen yang diekstrak ke dalam struktur terpadu menggunakan koordinat spasial dari deteksi tata letak.
+	\end{enumerate}
+	\item \textit{End-to-End Approaches} dengan \textit{Vision Language Models} (VLMs)
+	\par Kemajuan terkini dalam \textit{multimodal large models}, khususnya VLMs, menawarkan alternatif yang menjanjikan. Model seperti GPT-4 dan QwenVL memproses data visual dan tekstual secara bersamaan, memungkinkan konversi \textit{end-to-end} dari gambar dokumen menjadi \textit{output} terstruktur. Meskipun demikian, pendekatan ini memiliki keterbatasan untuk tugas rekonstruksi dokumen yang presisi. VLMs menghasilkan keluaran dalam format seperti Markdown (Nougat) atau JSON (GOT) yang berfokus pada representasi semantik dan pemahaman hierarki dokumen, bukan pada penyediaan koordinat spasial seperti yang dilakukan oleh \textit{modular pipeline system}. Selain itu, VLMs cenderung tidak menunjukkan kinerja yang konsisten melebihi \textit{modular pipeline system} dalam tugas-tugas, seperti membedakan elemen-elemen halaman. Oleh karena itu, pendekatan ini kurang optimal untuk tujuan rekonstruksi tata letak dokumen agar identik dengan sumber aslinya.
+\end{enumerate}
+
+\section{Font Identification}
+Menentukan gaya huruf yang sesuai untuk gambar dokumen merupakan tantangan tersendiri, karena dalam satu gambar dokumen sangat mungkin terdapat variasi gaya huruf, misalnya antara bagian judul dan paragraf. Karena penting untuk menghasilkan output yang benar-benar menyerupai dokumen fisiknya, penentuan gaya huruf tidak dapat menggunakan metode \textit{font generation} atau \textit{font synthesis}. Oleh karena itu, diperlukan pendekatan \textit{font identification}.
+
+Salah satu pendekatan \textit{font identification} adalah \textit{DeepFont} yang dilatih menggunakan 2383 kategori huruf. \textit{DeepFont} merupakan sistem berbasis \textit{deep learning} yang dirancang untuk mengenali jenis font dari gambar teks. Sistem ini dikembangkan karena proses mengenali font secara manual sangat sulit, terutama ketika gambar berkualitas rendah, bercampur dengan latar belakang, atau mengandung distorsi. Selain itu, jumlah font sangat banyak dan sering kali memiliki perbedaan kecil yang sulit dibedakan secara visual. Untuk keperluan pelatihan, \textit{DeepFont} menggunakan dua jenis data, yaitu data sintetis (teks yang dirender secara otomatis) dan data nyata dari foto dunia nyata. Karena data nyata sangat terbatas, \textit{DeepFont} menggabungkan kedua jenis data tersebut agar model dapat belajar secara lebih efektif \autocite{wang2015deepfontidentifyfontimage}.
+
+\textit{DeepFont} menggunakan arsitektur \textit{CNN} yang terdiri dari dua bagian. Bagian pertama adalah \textit{unsupervised cross-domain sub-network} yang dilatih menggunakan \textit{Stacked Convolutional Auto-Encoder} (SCAE). Bagian ini bertugas mempelajari ciri visual dasar, seperti bentuk garis dan tepi huruf, baik dari data sintetis maupun data nyata tanpa menggunakan label. Dengan pendekatan ini, model dapat memahami pola umum pada kedua sumber data sehingga mengurangi kesenjangan antara gambar sintetis dan gambar nyata. Bagian kedua adalah \textit{supervised domain-specific sub-network} yang dilatih menggunakan data sintetis berlabel untuk mempelajari pola yang lebih kompleks sehingga mampu membedakan satu font dari font lainnya \autocite{wang2015deepfontidentifyfontimage}.
+
+Untuk meningkatkan performa, \textit{DeepFont} menerapkan teknik \textit{text data augmentation}, seperti mengubah jarak antarhuruf dan \textit{aspect ratio}. Teknik ini membuat data sintetis tampak lebih realistis karena dalam desain grafis, huruf sering dimodifikasi untuk kebutuhan visual. Selain itu, \textit{DeepFont} menggunakan metode pengujian \textit{multi-scale} dan \textit{multi-view} dengan memotong beberapa bagian gambar dan memprosesnya dalam berbagai ukuran. Hasil dari potongan-potongan tersebut kemudian digabungkan untuk mendapatkan prediksi yang lebih akurat. Dengan pendekatan ini, \textit{DeepFont} mampu mencapai akurasi tinggi meskipun gambar memiliki kualitas yang tidak ideal \autocite{wang2015deepfontidentifyfontimage}.
+
+Selain menghasilkan prediksi font, \textit{DeepFont} juga dapat menghitung kemiripan antar-font menggunakan fitur pada lapisan tertentu. Kemampuan ini memungkinkan sistem memberikan rekomendasi font yang mirip dengan font pada gambar input, yang sangat bermanfaat bagi desainer dalam mencari alternatif. \textit{DeepFont} juga mendukung kompresi model sehingga ukurannya dapat diperkecil tanpa penurunan akurasi yang signifikan, membuatnya dapat digunakan pada perangkat dengan keterbatasan memori seperti aplikasi \textit{mobile} \autocite{wang2015deepfontidentifyfontimage}.
+
+\section{PPstructure-v3 (PaddleOCR)}
+PP-StructureV3 merupakan sistem \textit{pipeline} multi-model yang dikembangkan untuk melakukan \textit{parsing} dokumen berbasis gambar. Sistem ini mampu mengonversi gambar dokumen maupun berkas PDF menjadi keluaran terstruktur dalam format JSON dan Markdown secara akurat dan efisien \autocite{cui2025paddleocr30technicalreport}.
+
+\subsection{Arsitektur Sistem}
+
+PP-StructureV3 terdiri atas lima modul utama yang berfungsi secara berurutan untuk memproses dokumen secara menyeluruh \autocite{cui2025paddleocr30technicalreport}. Setiap modul memiliki peran spesifik dalam peningkatan kualitas masukan, ekstraksi informasi, serta analisis struktur dokumen. Gambaran lengkap kelima modul tersebut dapat dilihat pada Gambar~\ref{fig:Pipeline PPstructure-v3}.
+
+\begin{enumerate}
+	\item \textit{Preprocessing}  
+	\par Modul ini menyiapkan gambar dokumen sebelum memasuki tahap pemrosesan lanjutan. Dua komponen utama yang digunakan ialah model klasifikasi orientasi berbasis PP-LCNet dan model \textit{text image unwarping} berbasis UVDoc untuk memperbaiki distorsi geometris. Dengan desain tersebut, modul ini efektif dalam menangani gambar dokumen berkualitas rendah yang mengalami rotasi ataupun distorsi sehingga menghasilkan masukan yang lebih bersih untuk tahap berikutnya.
+	
+	\item OCR  
+	\par Modul OCR memanfaatkan PP-OCRv5 dengan \textit{preprocessing} yang dinonaktifkan untuk mendeteksi serta mengenali seluruh teks dalam gambar dokumen. Dibandingkan versi sebelumnya, PP-OCRv5 memberikan peningkatan signifikan pada pengenalan layout vertikal, tulisan tangan, serta karakter Mandarin yang jarang muncul. Peningkatan ini penting untuk menjaga akurasi ekstraksi teks pada berbagai jenis dokumen.
+	
+	\item \textit{Layout analysis}  
+	\par Modul analisis tata letak terdiri atas dua model yang saling melengkapi. Pertama, PP-DocLayout-plus yang merupakan versi optimal dari PP-DocLayout dan dirancang untuk mendeteksi layout kompleks seperti majalah dan koran multi-kolom, laporan dengan banyak tabel, dokumen ujian, tulisan tangan, serta layout berorientasi vertikal. Kedua, model \textit{region detection} yang mengidentifikasi artikel berbeda dalam satu halaman, misalnya satu halaman koran yang berisi beberapa artikel, sehingga tiap elemen dapat diasosiasikan dengan artikel yang benar dan urutan pembacaan dapat dipulihkan secara tepat.
+	
+	\item \textit{Document items recognition}  
+	\par Berdasarkan prediksi hasil \textit{layout detection}, sistem mengenali isi setiap elemen halaman menggunakan metode yang sesuai. Empat jenis elemen utama yang diproses dalam tahap ini adalah sebagai berikut.
+
+	\begin{enumerate}
+		\item Tabel
+		\par Sistem menggunakan PP-TableMagic, sebuah sistem lengkap yang mencakup klasifikasi orientasi tabel, klasifikasi tipe bingkai, deteksi sel berbasis \textit{object detection}, serta pengenalan struktur untuk menghasilkan keluaran dalam format HTML.
+		
+		\item Formula  
+		\par Pengenalan formula dilakukan menggunakan PP-FormulaNet\_plus, versi peningkatan dari PP-FormulaNet yang mampu mengenali potongan gambar formula dan menghasilkan kode \LaTeX{} secara akurat. Peningkatan mencakup panjang token hingga 2560, perluasan dataset formula kompleks, serta dukungan terhadap formula yang mengandung karakter Mandarin.
+		
+		\item Grafik
+		\par Sistem memakai PP-Chart2Table, yaitu model \textit{vision--language} \textit{end-to-end} yang ringan untuk mengekstraksi data dari berbagai jenis grafik seperti histogram, \textit{line chart}, dan \textit{pie chart}, lalu mengonversinya menjadi tabel berformat Markdown. Model ini ditingkatkan melalui mekanisme \textit{Shuffled Chart Data Retrieval}, penataan ulang token yang cermat, \textit{data synthesis pipeline} berbasis RAG, serta distilasi LLM dua tahap dengan data \textit{out-of-distribution}.
+		
+		\item Stempel  
+		\par Untuk pengenalan stempel, sistem menggunakan PP-OCRv4\_seal yang dirancang untuk mengenali berbagai bentuk stempel, termasuk oval dan lingkaran. Sistem ini dilengkapi model deteksi teks melengkung yang mampu meluruskan teks yang bengkok serta model pengenalan teks generik untuk meningkatkan akurasi.
+	\end{enumerate}
+		
+	\item \textit{Post-processing}  
+	\par Setelah seluruh elemen dikenali, modul ini menyusun kembali hubungan antar komponen dalam dokumen, seperti menghubungkan gambar atau tabel dengan keterangan (\textit{caption}) yang sesuai serta memulihkan urutan pembacaan. Modul ini menggunakan versi peningkatan dari algoritma X–Y Cut yang memberikan hasil lebih baik pada layout kompleks seperti majalah, koran, dan dokumen dengan \textit{typeset} vertikal.
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/paddleocr.png}
+	\caption{\textit{Pipeline} PP-StructureV3 \autocite{sternad2023managingdms}}
+	\label{fig:Pipeline PPstructure-v3}
+\end{figure}
+
+\subsection{Keunggulan Utama}
+PP-StructureV3 mencapai performa \textit{state-of-the-art} dalam \textit{document parsing} untuk bahasa Inggris dan Mandarin. Meskipun hanya memiliki sekitar 0{,}091 miliar parameter, sekitar 5/1000 dari Qwen2.5-VL-72B, model ini mampu menghasilkan kinerja yang setara atau bahkan melampaui model berparameter miliaran \autocite{cui2025paddleocr30technicalreport}.
+
+Selain efisien, PP-StructureV3 juga komprehensif dalam menangani berbagai elemen dokumen, mulai dari teks, tabel, formula, grafik, hingga stempel. Kemampuannya dalam memproses layout kompleks seperti dokumen multi-kolom, halaman koran dengan banyak artikel, serta orientasi vertikal menjadikannya sangat adaptif untuk berbagai kebutuhan digitalisasi dokumen. Keluaran berupa JSON dan Markdown yang terstruktur memungkinkan pemanfaatan langsung untuk berbagai aplikasi lanjutan tanpa memerlukan pemrosesan tambahan yang signifikan \autocite{cui2025paddleocr30technicalreport}.
+
+\section{DocLayout-YOLO}
+DocLayout-YOLO merupakan algoritma yang dirancang khusus untuk menganalisis struktur dan tata letak berbagai jenis dokumen secara otomatis. Tujuannya adalah mengatasi tantangan klasik dalam analisis dokumen, yaitu mempertahankan keseimbangan antara kecepatan pemrosesan dan akurasi hasil. Berbeda dengan metode-metode sebelumnya yang menggunakan pendekatan \textit{multimodal} (menggabungkan fitur visual dan teks) yang cenderung lebih lambat meskipun akurat, atau metode \textit{unimodal} (hanya menggunakan fitur visual) yang lebih cepat namun kurang presisi, DocLayout-YOLO berhasil mencapai keunggulan pada kedua aspek tersebut melalui optimalisasi khusus pada tahap \textit{pre-training} dan arsitektur model \autocite{zhao2024doclayoutyoloenhancingdocumentlayout}.
+
+Berdasarkan pengembangnya \textcite{zhao2024doclayoutyoloenhancingdocumentlayout}, berikut merupakan kelebihan atau inovasi yang dimiliki DocLayout-YOLO.
+\begin{enumerate}
+	\item Kumpulan Data \textit{Pre-training} DocSynth-300K
+	\par Inovasi DocLayout-YOLO yang pertama adalah penciptaan kumpulan data \textit{pre-training} berskala besar bernama DocSynth-300K, yang terdiri dari 300 ribu dokumen sintetis dengan keragaman tinggi. Data ini dihasilkan menggunakan algoritma \textit{Mesh-candidate BestFit}, sebuah metode yang memandang penyusunan dokumen sebagai permasalahan \textit{2D packing problem}. Algoritma tersebut bekerja dengan cara mengambil berbagai komponen dasar dokumen seperti teks dalam berbagai ukuran huruf, tabel dengan beragam bentuk, gambar, dan elemen-elemen lainnya yang kemudian menyusunnya secara optimal pada halaman dokumen sambil mempertimbangkan prinsip-prinsip desain seperti \textit{alignment}, \textit{density}, dan estetika visual. Proses ini memastikan bahwa setiap dokumen sintetis yang dihasilkan tidak hanya beragam dalam hal jenis elemen, tetapi juga dalam hal tata letak keseluruhan, mencakup format satu kolom, dua kolom, banyak kolom, hingga gaya makalah akademis, majalah, dan koran. Proses \textit{pre-training} pada DocSynth-300K memberikan fondasi yang kuat bagi model untuk memahami berbagai jenis dokumen sebelum dilatih lebih lanjut pada tugas-tugas spesifik.
+	
+	\begin{enumerate}
+		\item Elemen yang disintesis
+		\par Meliputi berbagai hierarki judul, \textit{main body text}, \textit{ignored text} seperti \textit{header} dan \textit{footer}, gambar dan \textit{caption}, tabel beserta keterangan dan \textit{footer}nya, serta rumus matematika yang berdiri sendiri dan keterangannya.
+		
+		\item Augmentasi data
+		\par Proses ini mensimulasikan berbagai kondisi nyata melalui augmentasi data yang mencakup \textit{random flip}, penyesuaian kecerahan dan kontras, \textit{random crop}, ekstraksi tepi menggunakan filter Sobel, serta \textit{elastic transformation} dan penambahan \textit{Gaussian noise}.
+	\end{enumerate}
+	
+	\item Modul \textit{Global-to-Local Controllable Receptive Module} (GL-CRM)
+	\par Inovasi kedua adalah pengembangan modul \textit{Global-to-Local Controllable Receptive Module} (GL-CRM), sebuah komponen arsitektur \textit{neural network} yang dirancang khusus untuk menangani variasi skala elemen dokumen secara efektif, mulai dari elemen kecil seperti judul satu baris hingga elemen besar seperti tabel yang memenuhi seluruh halaman. Modul ini bekerja dengan mengekstrak dan mengintegrasikan fitur-fitur pada berbagai tingkat skala dan granularitas melalui lapisan konvolusi yang berbagi bobot dengan penerapan tingkat dilasi yang bervariasi. Fitur-fitur yang telah digabungkan selanjutnya diproses menggunakan lapisan konvolusi ringan untuk menghasilkan \textit{saliency mask} yang berperan sebagai \textit{gate} dalam menentukan \textit{relative importance weight}. Keluaran akhir diperoleh melalui \textit{output projector} ringan yang memanfaatkan \textit{shortcut connection} untuk menggabungkan fitur terintegrasi dengan \textit{initial features}, sehingga informasi penting tetap terjaga selama proses transformasi. GL-CRM mengatasi tantangan variasi skala tersebut melalui pendekatan hierarkis tiga tingkat:
+	
+	\begin{enumerate}
+		\item \textit{Global}: Menggunakan \textit{kernel} konvolusi besar dengan dilasi yang diperluas untuk menangkap pola skala halaman.
+		\item Blok: Menggunakan \textit{kernel} yang lebih kecil untuk mendeteksi sub-blok.
+		\item Lokal: Memproses informasi semantik detail dengan modul ringan.
+	\end{enumerate}
+\end{enumerate}

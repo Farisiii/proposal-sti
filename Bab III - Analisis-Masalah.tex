@@ -6,19 +6,248 @@
 % ============================================================================================
 \chapter{ANALISIS MASALAH}
 \label{chap:analisis-masalah}
-\section{Analisis Kondisi Saat Ini}
-Menurut \textcite{laudon2020}, gambarkan terlebih dahulu model konseptual sistem yang ada saat ini. Model konseptual ini berisi berbagai komponen atau subsitem dan interaksi antarsubsistem tersebut. Setelah itu, berikan penjelasan tentang masalah yang ada pada sistem tersebut. Paragraf berikut berisi contoh penjabaran masalah sistem informasi fasilitas kesehatan untuk pasien \autocite{pressman2019}. 
-\section{Analisis Kebutuhan}
-\lipsum[4]
-\subsection{Identifikasi Masalah Pengguna}
-\lipsum[5]
-\subsection{Kebutuhan Fungsional}
-\lipsum[6]
-\subsection{Kebutuhan Nonfungsional}
-\lipsum[7]
 
+\section{Analisis Kondisi Digitalisasi Dokumen Saat Ini}
+Transformasi digital merupakan hal penting bagi berbagai organisasi untuk meningkatkan efisiensi dalam penyimpanan, pemrosesan, dan penyaluran informasi \autocite{ma2025dociqbenchmarkdatasetfeature}. Organisasi yang melaksanakan digitalisasi dokumen fisik umumnya melakukan proses pemindaian, yaitu konversi dokumen fisik menjadi representasi gambar digital yang biasanya disimpan dalam format PDF, JPEG, atau TIFF. Melalui proses ini, dokumen yang sebelumnya hanya dapat diakses secara manual kini dapat disimpan dan diarsipkan dalam bentuk digital sehingga lebih mudah diakses serta dapat mengurangi risiko kerusakan.
+
+Meskipun pemindaian berhasil mengubah dokumen dari bentuk fisik menjadi digital untuk tujuan pengarsipan, hasilnya masih berupa gambar semata. Keluaran dari pemindaian standar bersifat \textit{non-machine-readable} \autocite{Dias_2023}. Artinya, sistem hanya mengenali berkas hasil pemindaian sebagai kumpulan piksel tanpa memahami isi maupun struktur teks yang terkandung di dalamnya. Kondisi ini menimbulkan berbagai keterbatasan, seperti sulitnya melakukan pencarian teks, ekstraksi data, dan penyuntingan. Oleh karena itu, tantangan utama dalam transformasi digital dokumen tidak hanya terletak pada perubahan format, tetapi juga pada cara hasil digitalisasi tersebut dapat dimanfaatkan secara optimal sesuai dengan kebutuhan pengguna.
+
+\section{Analisis Kebutuhan Digitalisasi Dokumen}
+Berdasarkan hasil analisis kondisi saat ini yang disajikan pada Subbab \ref{chap:analisis-masalah}.1, diketahui bahwa proses digitalisasi yang dilakukan melalui pemindaian masih memiliki sejumlah keterbatasan, terutama dalam hal pemanfaatan hasil digitalisasi secara optimal. Oleh karena itu, diperlukan penerapan digitalisasi dengan pendekatan yang lebih efektif melalui pengembangan sistem yang menawarkan fitur lebih beragam guna mendukung pengelolaan data digital dan mempermudah pengguna dalam menjalankan aktivitasnya.
+
+\subsection{Identifikasi Masalah Pengguna}
+Keterbatasan dari dokumen pindaian yang bersifat \textit{non-machine-readable} secara langsung berdampak pada alur kerja pengguna. Berikut adalah identifikasi masalah utama yang dihadapi.
+\begin{enumerate}
+	\item Tidak efisien dalam pencarian informasi spesifik 
+	\par Pengguna tidak dapat menemukan informasi di dalam dokumen hasil pemindaian. Ketika diperlukan pencarian data spesifik, fungsi pencarian seperti Ctrl+F tidak dapat digunakan. Akibatnya, pengguna harus membaca dokumen hasil pemindaian secara manual, halaman demi halaman. Proses tersebut terbukti memakan waktu, tidak efisien, dan berpotensi menimbulkan kesalahan manusia.
+	
+	\item Keterbatasan aksesibilitas 
+	\par Keterbatasan aksesibilitas juga menjadi permasalahan penting. Dokumen yang hanya berupa gambar tidak dapat dipahami oleh teknologi bantu seperti pembaca layar sehingga pengguna dengan keterbatasan penglihatan tidak dapat mengakses informasi di dalamnya. Hal ini menimbulkan hambatan digital serta menciptakan lingkungan kerja yang kurang mendukung bagi semua pengguna.
+	
+	\item Keterbatasan integrasi dokumen hasil pemindaian 
+	\par Data yang masih berformat gambar tidak dapat diekstraksi secara otomatis untuk diolah atau digunakan kembali dalam sistem lain. Kondisi ini membatasi organisasi dalam mengotomatisasi proses kerja yang berkaitan dengan pengelolaan dokumen. Akibatnya, informasi penting dari hasil pemindaian dokumen fisik tidak dapat dimanfaatkan secara optimal untuk mendukung kegiatan organisasi, terutama yang berkaitan dengan otomatisasi alur kerja.
+\end{enumerate}
+
+\subsection{Kebutuhan Fungsional}
+Keterbatasan dari dokumen pindaian yang bersifat \textit{non-machine-readable} secara langsung berdampak pada alur kerja pengguna. Permasalahan yang telah diidentifikasi pada Subbab \ref{chap:analisis-masalah}.2.1 perlu diselesaikan melalui pengembangan sistem baru dengan berbagai kemampuan fungsional. Kebutuhan fungsional tersebut menjelaskan fitur yang harus dimiliki sistem agar mampu mengatasi kendala tersebut dan mendukung otomatisasi proses kerja secara lebih efektif. Rincian kebutuhan fungsional sistem disajikan pada Tabel~\ref{tbl:Daftar_Kebutuhan_Fungsional}.
+
+\begin{table}[H]
+	\footnotesize
+	\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.5cm}|X|}
+		\hline
+		\textbf{Kode} & \textbf{Kebutuhan Fungsional} \\ 
+		\hline
+		FR01 & Hasil digitalisasi dokumen harus disimpan dalam format yang bersifat \textit{searchable}, seperti PDF \\ 
+		\hline
+		FR02 & Tata letak dokumen digital yang dihasilkan harus menyerupai dokumen fisik aslinya \\ 
+		\hline
+		FR03 & Elemen dalam dokumen digital yang dihasilkan, seperti teks, tabel, dan gambar, harus dapat dipilih, disalin, serta dipindahkan ke aplikasi lain \\ 
+		\hline
+	\end{tabularx}
+	\caption{Daftar Kebutuhan Fungsional Sistem}
+	\label{tbl:Daftar_Kebutuhan_Fungsional}
+\end{table}
+
+\subsection{Kebutuhan Nonfungsional}
+Kebutuhan nonfungsional berfokus pada aspek kualitas dan kinerja sistem yang akan dikembangkan. Aspek ini tidak secara langsung menggambarkan fungsi utama sistem, tetapi sangat berpengaruh terhadap keandalan, efisiensi, serta pengalaman pengguna dalam pengoperasian sistem. Rincian kebutuhan nonfungsional sistem disajikan pada Tabel~\ref{tbl:Daftar_Kebutuhan_Nonfungsional}.
+
+\begin{table}[H]
+	\footnotesize
+	\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{2.5cm}|X|}
+		\hline
+		\textbf{Kode} & \textbf{Parameter} & \textbf{Kebutuhan Nonfungsional} \\ 
+		\hline
+		NFR01 & \textit{Accuracy} & Tingkat akurasi penentuan elemen harus mencapai minimal 75\% untuk dokumen dengan kualitas baik dan teks yang jelas \\ 
+		\hline
+		NFR02 & \textit{Compatibility} & Sistem harus mendukung format input berkas gambar hasil pemindaian, yaitu PDF berbasis gambar, JPEG, dan PNG \\ 
+		\hline
+		NFR03 & \textit{Performance} & Sistem harus mampu memproses dokumen dengan waktu respons maksimal 1,5 menit per halaman \\ 
+		\hline
+		NFR04 & \textit{Reliability} & Jika gambar input tidak dapat diproses, sistem harus menghasilkan log error yang informatif dan mengembalikan kode status kesalahan yang sesuai \\ 
+		\hline
+		NFR05 & \textit{Security} & Sistem harus melakukan validasi tipe dan ukuran berkas sebelum pemrosesan untuk mencegah masuknya berkas berbahaya atau berkas yang tidak sesuai spesifikasi \\ 
+		\hline
+	\end{tabularx}
+	\caption{Daftar Kebutuhan Nonfungsional Sistem}
+	\label{tbl:Daftar_Kebutuhan_Nonfungsional}
+\end{table}
 \section{Analisis Pemilihan Solusi}
+Analisis pemilihan solusi dilakukan untuk menentukan pendekatan yang paling tepat dalam mentransformasi dokumen fisik menjadi dokumen digital yang menyerupai bentuk aslinya. Proses ini mempertimbangkan kebutuhan sistem, karakteristik data dokumen, serta kemampuan masing-masing pendekatan dalam menjalankan tahapan utama seperti deteksi tata letak, pengenalan teks, dan rekonstruksi struktur visual. Setiap alternatif dinilai berdasarkan ketepatan hasil, stabilitas performa, serta tingkat fleksibilitasnya ketika diterapkan pada variasi dokumen. Dengan mempertimbangkan faktor-faktor tersebut, pemilihan solusi dapat dilakukan secara lebih terarah dan sesuai dengan tujuan digitalisasi, yaitu menghasilkan representasi digital yang akurat secara tekstual sekaligus konsisten secara visual.
+
+
 \subsection{Alternatif Solusi}
-\lipsum[8]
+Dalam memproses gambar dokumen agar dapat direkonstruksi menjadi dokumen digital yang menyerupai bentuk fisiknya, tersedia berbagai \textit{pipeline} \textit{document parsing} yang dapat dimanfaatkan untuk memperoleh setiap elemen yang terdapat pada dokumen. \textit{Pipeline} tersebut umumnya sudah mencakup tahap-tahap penting seperti deteksi tata letak, segmentasi elemen, hingga ekstraksi informasi, sehingga tiap elemen yang teridentifikasi dapat diproses lebih lanjut secara sistematis. Pemanfaatan \textit{pipeline} yang telah tersedia menjadi pilihan yang efisien karena dapat menghemat waktu pengembangan serta mengurangi kebutuhan sumber daya komputasi. Meskipun demikian, baik \textit{pipeline} siap pakai maupun \textit{pipeline} yang dibangun secara mandiri tetap memerlukan tahap \textit{layout reconstruction} untuk memastikan hasil akhir merepresentasikan dokumen asli secara utuh.
+
+Berdasarkan hasil perbandingan pada Tabel~\ref{tbl:layout_model_summary} dan Tabel~\ref{tbl:sroie_results}, DocLayout-YOLO dipilih sebagai model \textit{document layout analysis} karena memberikan akurasi deteksi elemen yang unggul dan stabil pada dokumen cetak. Untuk tahap OCR, model \textit{Transformer OCR} (TrOCR) dipilih karena menunjukkan kinerja terbaik dalam pengenalan teks dengan variasi tipografi. Dengan demikian, \textit{pipeline} yang dibangun secara mandiri menggabungkan DocLayout-YOLO pada tahap deteksi elemen dokumen dan TrOCR pada tahap pengenalan teks. Hasil deteksi dari DocLayout-YOLO menyediakan koordinat serta klasifikasi blok dokumen yang kemudian diekstraksi sebagai input bagi TrOCR pada proses pengenalan teks per elemen.
+
+Tahap \textit{layout reconstruction} kemudian digunakan untuk menyusun kembali urutan baca, menggabungkan hasil pengenalan dari setiap elemen, serta merekonstruksi struktur dokumen secara menyeluruh. Pada tahap ini, dilakukan pula penyesuaian visual yang diperlukan agar representasi dokumen tetap konsisten dengan bentuk aslinya. Penyesuaian tersebut mencakup normalisasi ukuran elemen, penyelarasan tata letak, serta estimasi atribut tipografi seperti jenis huruf dan ukuran huruf berdasarkan informasi geometris dari \textit{bounding box} dan resolusi citra. Kombinasi proses tersebut memastikan bahwa hasil akhir tidak hanya akurat secara tekstual, tetapi juga selaras secara visual dengan struktur dan format dokumen asli.
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{3cm}|X|X|X|}
+		\hline
+		\textbf{Model} & \textbf{Backbone} & \textbf{Params} & \textbf{Average} \\
+		\hline
+		DiT-L & ViT-L & 361,6M & 26,90 \\
+		\hline
+		LayoutLMv3 & RoBERTa-B & 138,4M & 28,84 \\
+		\hline
+		DocLayout-YOLO & v10m & 19,6M & \textbf{47,38} \\
+		\hline
+		SwinDocSegmenter & Swin-L & 223M & 35,89 \\
+		\hline
+		GraphKD & R101 & 44,5M & 27,10 \\
+		\hline
+		DOCX-Chain & - & - & 21,27 \\
+		\hline
+	\end{tabularx}
+	\caption{Perbandingan Model \textit{Layout Analysis} Berdasarkan Rata-Rata Performa \autocite{ouyang2025omnidocbenchbenchmarkingdiversepdf}}
+	\label{tbl:layout_model_summary}
+\end{table}
+
+\begin{table}[H]
+	\footnotesize
+	\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{3cm}|X|X|X|}
+		\hline
+		\textbf{Model} & \textbf{Recall} & \textbf{Precision} & \textbf{F1} \\
+		\hline
+		CRNN & 28,71 & 48,58 & 36,09 \\
+		\hline
+		Tesseract OCR & 57,50 & 51,93 & 54,57 \\
+		\hline
+		H\&H Lab & 96,35 & 96,52 & 96,43 \\
+		\hline
+		MSOLab & 94,77 & 94,88 & 94,82 \\
+		\hline
+		CLOVA OCR & 94,30 & 94,88 & 94,59 \\
+		\hline
+		TrOCR-LARGE & 96,59 & 96,57 & \textbf{96,58} \\
+		\hline
+	\end{tabularx}
+	\caption{Hasil Evaluasi (\textit{Word-level Recall}, \textit{Precision}, dan F1) pada \textit{Dataset} SROIE \autocite{li2022trocrtransformerbasedopticalcharacter}}
+	\label{tbl:sroie_results}
+\end{table}
+
+\subsubsection{Kombinasi DocLayout-YOLO, TrOCR, dan \textit{Layout Reconstruction}}
+Model DocLayout-YOLO digunakan untuk melakukan deteksi elemen pada tingkat halaman. Dalam konteks DLA, elemen tersebut mencakup area teks, tabel, maupun gambar. DocLayout-YOLO membagi citra halaman ke dalam kisi-kisi dan memanfaatkan arsitektur GL-CRM untuk mengakomodasi variasi skala elemen dokumen. Untuk setiap sel kisi, model memprediksi keberadaan elemen tertentu dengan memanfaatkan fitur global, blok, dan lokal secara hierarkis. Hasil proses ini berupa sejumlah \textit{bounding box} yang masing-masing memiliki koordinat pusat, lebar, dan tinggi, sehingga lokasi setiap elemen pada halaman dapat diidentifikasi secara akurat, termasuk untuk elemen berukuran kecil maupun sangat besar.
+
+Koordinat hasil deteksi tersebut kemudian digunakan untuk memotong setiap elemen menjadi citra terpisah. Setiap potongan diproses sesuai jenis elemennya. Khusus area teks, pengenalan karakter dilakukan menggunakan model TrOCR. Berbeda dari pendekatan sekuensial seperti CRNN, TrOCR memanfaatkan arsitektur \textit{Vision Transformer} pada tahap enkoder untuk mengekstraksi representasi visual citra teks, kemudian mendekodenya menjadi rangkaian karakter melalui \textit{Transformer decoder}. Pendekatan ini memberikan akurasi yang lebih stabil untuk variasi tipografi, ukuran huruf, serta kondisi citra dokumen yang tidak seragam.
+
+Tahap terakhir adalah \textit{layout reconstruction}, yaitu menyusun kembali seluruh elemen ke dalam posisi yang konsisten dengan dokumen asli. Penyusunan dilakukan dengan memanfaatkan koordinat \textit{bounding box} dari DocLayout-YOLO untuk menata kembali elemen secara geometris, serta mengintegrasikan hasil pengenalan teks dari TrOCR. Selain itu, dilakukan pula estimasi atribut tipografi berdasarkan informasi dari \textit{bounding box} dan resolusi citra. Penyesuaian visual tersebut mencakup normalisasi ukuran elemen dan penyelarasan tata letak agar representasi dokumen tetap konsisten dengan bentuk aslinya. Kombinasi proses tersebut memastikan bahwa hasil akhir tidak hanya akurat secara tekstual, tetapi juga selaras secara visual dengan struktur dan format dokumen asli.
+
+\subsubsection{Model \textit{Pipeline} \textit{Document Parsing}}
+Berbagai model \textit{pipeline} \textit{document parsing} telah dikembangkan untuk meningkatkan kualitas pemrosesan dokumen. Pada penelitian yang dilakukan oleh \textcite{wei2025deepseekocrcontextsopticalcompression}, dilakukan evaluasi terhadap enam model \textit{pipeline} dan diperoleh bahwa PP-StructureV3 memberikan kinerja yang lebih unggul dibandingkan lima model lainnya. Tabel~\ref{tbl:Perbandingan Model-Model Pipeline Document Parsing} menyajikan hasil penilaian terhadap keenam model tersebut. Semakin rendah \textit{overall score} yang diperoleh, semakin baik kinerja model \textit{pipeline} yang dinilai.
+
+\begin{table}[H]
+	\footnotesize
+	\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{3cm}|X|X|X|X|X|}
+		\hline
+		\textbf{Model} & \textbf{Text}  & \textbf{Formula}  & \textbf{Table}  & \textbf{Order}  & \textbf{Overall}\\ 
+		\hline
+		Dolphin & 0,352 & 0,465 & 0,258 & 0,35 & 0,356\\ 
+		\hline
+		Marker &  0,085 & 0,374 & 0,609 & 0,116 & 0,296\\ 
+		\hline
+		Mathpix & 0,105 & 0,306 & 0,243 & 0,108 & 0,191\\ 
+		\hline
+		MonkeyOCR-1.2B & 0,062 & 0,295 & 0,164 & 0,094 & 0,154\\ 
+		\hline
+		PPstructure-v3 & 0,073 & 0,295 & 0,162 & 0,077 & \textbf{0,152}\\ 
+		\hline
+	\end{tabularx}
+	\caption{Perbandingan Model-Model \textit{Pipeline} \textit{Document Parsing} \autocite{wei2025deepseekocrcontextsopticalcompression}}
+	\label{tbl:Perbandingan Model-Model Pipeline Document Parsing}
+\end{table}
+
+Model PP-Structure bekerja sebagai sebuah \textit{pipeline} berurutan untuk memahami isi dokumen secara menyeluruh. Proses dimulai dari \textit{layout detection} yang mengidentifikasi blok-blok penting dalam halaman, seperti paragraf teks, tabel, gambar, atau rumus. Setelah struktur halaman terbagi menjadi elemen-elemen tersebut, setiap elemen diproses menggunakan modul khusus. Sebagai contoh, teks diekstraksi menggunakan OCR dan tabel dikenali strukturnya melalui \textit{table structure recognition}. Hasil dari setiap modul kemudian digabungkan kembali dalam urutan yang sesuai dengan tata letak dokumen asli.
+
+Setelah seluruh elemen dikenali, \textit{pipeline} dilanjutkan dengan tahap \textit{layout reconstruction} untuk menghasilkan dokumen akhir yang rapi serta mudah digunakan. Pada tahap ini, hasil ekstraksi teks, struktur tabel, posisi gambar, dan elemen lain disusun kembali agar menyerupai dokumen fisik aslinya, baik dari segi urutan, kolom, maupun proporsi tata letak. Proses rekonstruksi juga mencakup estimasi atribut tipografi berdasarkan informasi geometris dari hasil deteksi elemen, sehingga memastikan konsistensi tampilan dokumen hasil digitalisasi dengan dokumen asli. Sistem kemudian menggabungkan seluruh elemen tersebut ke dalam keluaran digital yang bersifat \textit{searchable}, seperti PDF, sehingga pengguna dapat menyalin teks, memilih tabel, atau mengubahnya menjadi format DOCX sehingga dapat dilakukan penyuntingan terhadap dokumen tersebut. Tahap rekonstruksi inilah yang memastikan konsistensi visual dan fungsionalitas dokumen hasil digitalisasi.
+
 \subsection{Analisis Penentuan Solusi}
-\lipsum[9]
+Untuk memperoleh alternatif solusi yang paling sesuai untuk dikembangkan, langkah evaluasi awal adalah melakukan analisis kualitatif. Analisis ini difokuskan untuk mengidentifikasi kelebihan dan kekurangan dari setiap alternatif solusi yang diajukan.
+
+Proses identifikasi ini penting karena berfungsi sebagai landasan pertimbangan yang berimbang. Dengan memetakan kedua sisi dari setiap opsi, potensi manfaat yang ditawarkan oleh keunggulan solusi dapat dimaksimalkan sekaligus potensi risiko yang mungkin timbul dari kekurangannya dapat diminimalkan. Pemaparan rinci mengenai perbandingan kelebihan dan kekurangan dari seluruh alternatif solusi disajikan pada Tabel~\ref{tbl:solusi}.
+
+\begin{table}[H]
+	\centering
+	\caption{Kelebihan dan Kekurangan Masing-Masing Alternatif Solusi}
+	\label{tbl:solusi}
+	\footnotesize
+	\begin{tabularx}{\textwidth}{|p{3.2cm}|X|X|}
+		\hline
+		\textbf{Solusi} & \textbf{Kelebihan} & \textbf{Kekurangan} \\
+		\hline
+		
+		Kombinasi DocLayout-YOLO, TrOCR, dan \textit{Layout Reconstruction} &
+		\begin{enumerate}[left=0pt]
+			\item Akurasi deteksi tinggi untuk elemen bervariasi
+			\item Kontrol penuh atas setiap tahap
+		\end{enumerate} &
+		\begin{enumerate}[left=0pt]
+			\item Tidak memahami konteks dokumen
+		\end{enumerate} \\
+		\hline
+		
+		PP-StructureV3 dan \textit{Layout Reconstruction} &
+		\begin{enumerate}[left=0pt]
+			\item Kinerja PP-StructureV3 terbukti unggul dibandingkan model \textit{pipeline} lainnya
+			\item Pemahaman struktur dokumen secara menyeluruh
+		\end{enumerate} &
+		\begin{enumerate}[left=0pt]
+			\item Kurang fleksibel untuk modifikasi
+			\item Kurang kontrol atas detail proses
+		\end{enumerate} \\
+		\hline
+		
+	\end{tabularx}
+\end{table}
+
+Analisis kualitatif pada Tabel~\ref{tbl:solusi} perlu didukung oleh penilaian kuantitatif yang lebih objektif dan terukur. Untuk memenuhi kebutuhan ini, akan diterapkan metode \textit{Weighted Scoring Model} (WSM). Metode ini menyediakan kerangka kerja yang sistematis untuk menilai dan membandingkan alternatif solusi secara numerik.
+
+Dalam metode WSM, setiap kriteria akan diberikan bobot persentase yang menyatakan prioritas kebutuhan dalam penyelesaian masalah dengan total bobot adalah 100\% dan setiap kriteria memiliki skala 1--10. Pada metode WSM ini sudah ditetapkan tiga kriteria evaluasi utama. Berikut adalah definisi, alasan, dan alokasi bobot untuk setiap kriteria.
+
+\begin{enumerate}
+	\item Akurasi digitalisasi (bobot 50\%) 
+	\par Kriteria ini menjadi prioritas utama karena mengukur seberapa akurat sistem dapat mengonversi dokumen fisik menjadi dokumen digital, mencakup akurasi pengenalan teks, deteksi elemen, dan rekonstruksi tata letak visual. Sebagai inti dari keberhasilan digitalisasi dokumen, kriteria ini diberikan porsi bobot terbesar yaitu lima puluh persen.
+	
+	\item Fidelitas visual (bobot 30\%) 
+	\par Kriteria ini menilai kemampuan sistem untuk mempertahankan tampilan dokumen asli, termasuk tata letak, tipografi, dan struktur visual dalam dokumen digital hasil konversi. Kriteria ini penting untuk memastikan dokumen digital tetap konsisten dan dapat digunakan sebagaimana dokumen fisik aslinya, sehingga diberikan bobot tiga puluh persen.
+	
+	\item \textit{Implementability} (bobot 20\%) 
+	\par Kriteria ini meninjau aspek teknis dan ketersediaan sumber daya, seperti estimasi waktu, kompleksitas integrasi, dan kemudahan implementasi. Kriteria ini penting untuk menentukan kelayakan dan kecepatan penyelesaian sehingga diberikan bobot dua puluh persen.
+\end{enumerate}
+
+Penerapan proses penilaian yang telah dijabarkan, yaitu pemberian skor performa pada setiap alternatif dan kalkulasinya terhadap bobot kriteria yang telah ditetapkan, telah selesai dilakukan. Hasil perhitungan kuantitatif menggunakan metode WSM ini disajikan secara rinci pada Tabel~\ref{tbl:perbandingan-skor-solusi}.
+
+\begin{table}[H]
+	\centering
+	\caption{Perbandingan Skor Solusi Berdasarkan Kriteria Penilaian}
+	\label{tbl:perbandingan-skor-solusi}
+	\footnotesize
+	\begin{tabularx}{\textwidth}{|p{2.8cm}|c|X|X|}
+		\hline
+		\textbf{Kriteria} & \textbf{Bobot} &
+		\textbf{DocLayout-YOLO + TrOCR} &
+		\textbf{PP-StructureV3} \\
+		\hline
+		Akurasi Digitalisasi & 50\% & 7,5 & 8,5 \\
+		\hline
+		Fidelitas Visual & 30\% & 6,0 & 8,5 \\
+		\hline
+		\textit{Implementability} & 20\% & 6,0 & 8,0 \\
+		\hline
+		\textbf{Skor Total} & \textbf{100\%} & \textbf{6,9} & \textbf{8,4} \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+
+Pada kriteria akurasi digitalisasi, solusi kombinasi DocLayout-YOLO, TrOCR, dan \textit{layout reconstruction} memperoleh skor 7{,}5. DocLayout-YOLO mampu mendeteksi elemen dokumen dengan akurasi tinggi melalui fitur hierarkis GL-CRM, sementara TrOCR memberikan pengenalan teks yang baik. Namun, karena setiap komponen bekerja terpisah dan tidak memahami konteks dokumen, proses \textit{layout reconstruction} membutuhkan logika heuristik yang kompleks dan rentan menghasilkan kesalahan urutan baca, terutama pada tata letak multikolom atau elemen tumpang tindih. Hal ini juga berdampak pada fidelitas visual yang hanya mencapai skor 6{,}0, sebab estimasi atribut tipografi masih sangat bergantung pada aturan manual sehingga konsistensinya sulit dijaga.
+
+Sebaliknya, PP-StructureV3 dengan \textit{layout reconstruction} terintegrasi memperoleh skor 8{,}5 untuk akurasi digitalisasi dan 8{,}5 untuk fidelitas visual. Model ini memahami struktur dokumen secara holistik dan mampu menghasilkan urutan baca, hubungan spasial, serta atribut tipografi secara otomatis dan konsisten. \textit{Pipeline} yang matang membuat proses digitalisasi lebih stabil dan keluaran dokumen dapat langsung digunakan dalam bentuk PDF yang \textit{searchable} atau berkas DOCX yang dapat diedit. Keterbatasannya hanya muncul pada tata letak yang sangat tidak umum, tetapi dampaknya relatif kecil.
+
+Dari sisi \textit{implementability}, kombinasi DocLayout-YOLO, TrOCR, dan \textit{layout reconstruction} memperoleh skor 6{,}0 karena membutuhkan integrasi manual yang kompleks dan rentan propagasi galat, sedangkan PP-StructureV3 memperoleh skor 8{,}0 berkat \textit{pipeline} terintegrasi yang meminimalkan kebutuhan pengembangan logika tambahan. Berdasarkan bobot penilaian dan hasil metode WSM, PP-StructureV3 dengan \textit{layout reconstruction} menjadi solusi terpilih dengan skor total 8{,}4, melampaui kombinasi DocLayout-YOLO, TrOCR, dan \textit{layout reconstruction} yang memperoleh 6{,}9. Solusi PP-StructureV3 menawarkan keseimbangan terbaik antara akurasi digitalisasi, fidelitas visual, dan kemudahan implementasi, sehingga paling sesuai untuk kebutuhan digitalisasi dokumen fisik.
+
+
+Berdasarkan analisis kualitatif kelebihan dan kekurangan pada Tabel~\ref{tbl:solusi} serta didukung oleh hasil perhitungan kuantitatif metode WSM pada Tabel~\ref{tbl:perbandingan-skor-solusi}, solusi PP-StructureV3 dan \textit{layout reconstruction} ditetapkan sebagai solusi terpilih. Solusi PP-StructureV3 unggul secara signifikan karena menawarkan keseimbangan terbaik untuk digitalisasi dokumen fisik menjadi dokumen digital dengan skor total 8,4 dibandingkan solusi kombinasi DocLayout-YOLO, TrOCR, dan \textit{layout reconstruction} yang memperoleh skor 6,9. Keunggulan utama solusi PP-StructureV3 terletak pada kriteria akurasi digitalisasi dengan skor 8,5 dan fidelitas visual dengan skor 8,5, berkat \textit{pipeline} terintegrasi yang sudah matang dan kemampuan pemahaman struktur dokumen secara holistik. Kelebihan solusi PP-StructureV3 sebagai sistem \textit{end-to-end} yang siap pakai dengan keluaran terstruktur otomatis, dilengkapi tahap \textit{layout reconstruction} yang mencakup penyusunan ulang elemen dan estimasi atribut tipografi, tanpa memerlukan pengembangan logika rekonstruksi manual yang kompleks, menjadikannya pilihan yang paling optimal untuk dikembangkan. Solusi PP-StructureV3 mampu menghasilkan dokumen digital yang tidak hanya akurat secara tekstual, tetapi juga mempertahankan fidelitas visual dokumen fisik aslinya dengan sangat baik, sehingga sangat sesuai untuk kebutuhan digitalisasi dokumen.

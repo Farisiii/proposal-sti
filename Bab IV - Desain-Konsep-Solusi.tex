@@ -3,7 +3,35 @@
 % ==========================================
 \chapter{DESAIN KONSEP SOLUSI}
 \label{chap:desain-konsep-solusi}
-Ilustrasikan desain konsep solusi dalam bentuk model konseptual dan penjelasan secara ringkas, 
-beserta perbedaannya dengan sistem saat ini. Ilustrasi harus dapat dibandingkan (\textit{before} and \textit{after}). 
-Karena masih berupa proposal, bab ini hanya berisi gambar desain konsep solusi tersebut dan 
-penjelasan perbandingannya dengan gambar sistem yang ada saat ini (yang tergambar di awal Bab \ref{chap:analisis-masalah}).
+
+Desain konsep solusi disusun berdasarkan alur pemrosesan mulai dari masukan berupa citra dokumen hingga keluaran berupa dokumen digital yang telah direkonstruksi. Keseluruhan alur sistem yang diusulkan mencakup ekstraksi teks, deteksi elemen dokumen, analisis \textit{layout}, dan rekonstruksi gaya visual. Tahapan-tahapan ini saling terhubung untuk memastikan bahwa informasi struktur dan tampilan dokumen dipertahankan secara akurat, sehingga hasilnya adalah dokumen digital dalam format PDF yang tidak hanya dapat dicari dan diekstrak isinya, tetapi juga memiliki struktur visual yang serupa dengan dokumen fisik asli. Ilustrasi lengkap proses tersebut ditunjukkan pada Gambar~\ref{fig:desain-konsep-solusi} dengan penjabaran sebagai berikut:
+
+\begin{enumerate}
+	\item \textit{Document acquisition} \\
+	Dokumen fisik dipindai untuk menghasilkan citra digital beresolusi memadai sebagai masukan sistem.
+	
+	\item \textit{Processing} oleh \textit{pipeline document parsing} \\
+	Citra kemudian diproses untuk memperoleh informasi dasar dokumen, meliputi:
+	\begin{enumerate}
+		\item Hasil \textit{OCR} berupa teks yang dapat dicari.
+		\item Deteksi elemen seperti paragraf, tabel, dan gambar.
+		\item Analisis \textit{layout} untuk menentukan posisi dan struktur setiap elemen.
+	\end{enumerate}
+	
+	\item \textit{Post-processing} deteksi dan struktur \\
+	Keluaran \textit{pipeline} disempurnakan melalui langkah-langkah seperti penyesuaian \textit{bounding box} dan pemisahan elemen.
+	
+	\item Ekstraksi dan penetapan \textit{visual style} \\
+	Informasi visual tambahan, seperti \textit{font family}, \textit{font size}, \textit{line spacing}, serta karakteristik elemen lainnya, dipetakan untuk mendukung proses rekonstruksi.
+	
+	\item Rekonstruksi dokumen digital \\
+	Semua informasi yang telah disusun diproyeksikan ke \textit{digital canvas}. Sistem menempatkan elemen sesuai posisinya dan menerapkan gaya visual agar hasil akhir menyerupai dokumen fisik.
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/konsepsolusi.png}
+	\caption{Desain Konsep Solusi}
+	\label{fig:desain-konsep-solusi}
+\end{figure}

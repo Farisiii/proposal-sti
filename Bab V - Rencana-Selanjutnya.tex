@@ -3,9 +3,98 @@
 % ==========================================
 \chapter{RENCANA SELANJUTNYA}
 \label{chap:rencana-selanjutnya}
-Jelaskan secara detail langkah-langkah rencana selanjutnya, hal-hal yang diperlukan atau akan disiapkan, dan risiko dan mitigasinya, yang meliputi:
-\begin{enumerate}
-\item	Rencana implementasi, termasuk alat dan bahan yang diperlukan, lingkungan, konfigurasi, biaya, dan sebagainya.
-\item	Desain pengujian dan evaluasi, misalnya metode verifikasi dan validasi.
-\item	Analisis risiko dan mitigasi, misalnya tindakan selanjutnya jika ada yang tidak berjalan sesuai rencana.
-\end{enumerate}
+
+\section{Rencana Implementasi}
+Implementasi sistem dilakukan dengan memanfaatkan perangkat lunak dan pustaka pendukung yang diperlukan untuk pemrosesan dokumen, pelatihan model, serta rekonstruksi tata letak. Rencana implementasi mencakup spesifikasi perangkat yang digunakan, lingkungan pengembangan, estimasi biaya yang diperlukan, serta linimasa pengerjaan sistem.
+
+\subsection{Perangkat dan Pustaka}
+Perangkat lunak dan pustaka yang digunakan dalam pengembangan sistem ini mencakup lingkungan komputasi, bahasa pemrograman, \textit{pipeline} pemrosesan, dan model pembelajaran mesin. Daftar lengkap perangkat yang digunakan beserta fungsinya ditunjukkan pada Tabel~\ref{tbl:tools}.
+
+\begin{table}[H]
+	\footnotesize
+	\centering
+	\caption{Daftar Perangkat yang Digunakan}
+	\label{tbl:tools}
+	\begin{tabularx}{\textwidth}{|l|l|X|}
+		\hline
+		\textbf{Kategori} & \textbf{Perangkat} & \textbf{Kegunaan} \\ \hline
+		Lingkungan komputasi & Google Colab Pro & Eksekusi model, \textit{GPU runtime} \\ \hline
+		Bahasa pemrograman & Python & Implementasi \textit{pipeline} \\ \hline
+		\textit{Pipeline} & PP-StructureV3 & \textit{Pipeline} untuk memproses gambar dokumen \\ \hline
+		Model & DeepFont & Model untuk memperoleh informasi \textit{font family} \\ \hline
+	\end{tabularx}
+\end{table}
+
+\subsection{Lingkungan Implementasi}
+Pengembangan sistem dilakukan menggunakan kombinasi perangkat lokal dan komputasi awan untuk mengoptimalkan efisiensi pengembangan. Perangkat lokal berupa laptop digunakan untuk pengembangan kode dan pengujian awal, sedangkan Google Colab Pro digunakan untuk pelatihan model yang membutuhkan akselerasi GPU. Spesifikasi laptop yang digunakan ditunjukkan pada Tabel~\ref{tbl:laptop-spec}.
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\caption{Spesifikasi Laptop untuk Lingkungan Pengembangan}
+	\label{tbl:laptop-spec}
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		\textbf{Komponen} & \textbf{Spesifikasi} \\ \hline
+		Tipe Laptop & Acer Swift SF314 \\ \hline
+		Prosesor & AMD Ryzen 5 3500U, 4-core, 2,1 GHz \\ \hline
+		RAM & 6 GB \\ \hline
+		Penyimpanan & SSD 512 GB \\ \hline
+		Sistem Operasi & Windows 11 Home 64-bit \\ \hline
+	\end{tabularx}
+\end{table}
+
+Mengingat keterbatasan spesifikasi laptop, khususnya kapasitas RAM yang terbatas dan GPU terintegrasi, digunakan layanan Google Colab Pro untuk proses komputasi intensif. Layanan ini menyediakan akses GPU yang lebih \textit{powerful} dan durasi sesi yang lebih panjang dibandingkan versi gratis, sehingga cocok untuk pelatihan model pembelajaran mesin yang membutuhkan sumber daya komputasi tinggi.
+
+\subsection{Estimasi Biaya}
+Biaya pengembangan sistem berasal dari langganan layanan komputasi awan yang diperlukan untuk pelatihan model selama periode pengembangan. Estimasi biaya untuk pengembangan sistem selama tiga bulan ditunjukkan pada Tabel~\ref{tbl:biaya}.
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\caption{Estimasi Biaya Pengembangan}
+	\label{tbl:biaya}
+	\begin{tabularx}{\textwidth}{|l|X|r|}
+		\hline
+		\textbf{Item} & \textbf{Keterangan} & \textbf{Biaya} \\ \hline
+		Google Colab Pro & Langganan bulanan (4 bulan) & Rp800.000,00 \\ \hline
+		\textbf{Total} & & \textbf{Rp800.000,00} \\ \hline
+	\end{tabularx}
+\end{table}
+
+\subsection{Linimasa Pengerjaan}
+Pengerjaan sistem dilakukan secara bertahap sesuai dengan linimasa yang telah disusun untuk memastikan setiap tahapan dapat diselesaikan tepat waktu. Linimasa pengerjaan sistem secara keseluruhan ditunjukkan pada Gambar~\ref{fig:linimasa}.
+
+\begin{figure}[H]
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=1\textwidth]{image/linimasa.png}
+	\caption{Linimasa Pengerjaan}
+	\label{fig:linimasa}
+\end{figure}
+
+
+\section{Pengujian dan Evaluasi}
+Pengujian dilakukan dengan cara membuat berkas PDF menggunakan Microsoft Word secara manual dengan menerapkan berbagai penempatan posisi elemen dan \textit{font} dengan berbagai ukuran. Setelah itu, berkas PDF dikonversi ke dalam format gambar yang digunakan untuk pengujian. Pengujian dilakukan menggunakan pustaka PyMuPDF untuk memperoleh \textit{bounding box} pada dokumen asli dan dokumen keluaran. Selain itu, dilakukan pula pengujian secara manual dengan mendata \textit{font} yang digunakan, seperti jenis dan ukurannya, untuk mengecek kesesuaiannya berdasarkan yang dipakai pada dokumen saat penulisan menggunakan Microsoft Word. Pengujian dilakukan terhadap 100 halaman dengan konten yang berbeda-beda.
+
+
+\section{Analisis Risiko dan Mitigasi}
+
+Pengembangan sistem rekonstruksi dokumen fisik ke format digital menghadapi berbagai risiko yang dapat memengaruhi keberhasilan implementasi. Risiko-risiko tersebut mencakup aspek teknis seperti keterbatasan akurasi model, ketersediaan sumber daya komputasi, hingga tantangan dalam menangani variasi dokumen yang kompleks. Untuk mengantisipasi hal tersebut, diperlukan identifikasi risiko secara sistematis beserta strategi mitigasi yang tepat. Tabel \ref{tab:risiko-mitigasi} menyajikan daftar risiko potensial yang mungkin terjadi selama pengembangan sistem beserta langkah-langkah mitigasi yang akan diterapkan untuk meminimalkan dampak negatif terhadap pencapaian tujuan Tugas Akhir ini.
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\caption{Analisis Risiko dan Strategi Mitigasi}
+	\label{tab:risiko-mitigasi}
+	\begin{tabularx}{\textwidth}{|c|X|X|}
+		\hline
+		\textbf{No} & \textbf{Risiko} & \textbf{Strategi Mitigasi} \\ \hline
+		1 & Akurasi PP-StructureV3 tidak memenuhi target minimal 75\% pada dokumen tertentu & Melakukan \textit{preprocessing} tambahan seperti peningkatan kualitas gambar dan koreksi orientasi. Menyiapkan \textit{fallback mechanism} dengan \textit{pipeline} alternatif. Membatasi jenis dokumen yang diproses sesuai kapabilitas model \\ \hline
+		2 & Hasil OCR yang buruk atau kurang akurat dari bawaan PP-StructureV3 & Penambahan pendekatan berbasis VLM pada \textit{pipeline} untuk meningkatkan akurasi ekstraksi teks. Melakukan \textit{post-processing} dengan teknik koreksi ejaan dan validasi konteks \\ \hline
+		3 & Variasi kualitas dokumen \textit{input} yang kurang sesuai seperti adanya \textit{background} sehingga dimensi dokumen terlalu lebar atau terlalu tinggi yang menyebabkan penentuan \textit{bounding box} tidak tepat & Menerapkan deteksi tepi dokumen (\textit{edge detection}) untuk melakukan \textit{cropping} otomatis sehingga diperoleh area dokumen yang presisi. Melakukan normalisasi ukuran dokumen sesuai standar rasio aspek halaman \\ \hline
+		4 & Dokumen dengan elemen kompleks (grafik, diagram) tidak tertangani dengan baik & Fokus pada dokumen dengan struktur standar sesuai batasan masalah. Mendokumentasikan keterbatasan sistem. Merencanakan pengembangan \textit{future work} untuk elemen kompleks \\ \hline
+	\end{tabularx}
+\end{table}
+
+Setiap risiko yang teridentifikasi akan dipantau secara berkelanjutan selama proses pengembangan. Jika terdapat risiko yang terealisasi dan strategi mitigasi awal tidak efektif, akan dilakukan evaluasi ulang untuk menyesuaikan pendekatan atau bahkan kembali ke tahap eksplorasi jika diperlukan. Pendekatan iteratif ini memastikan bahwa sistem yang dikembangkan dapat mencapai tujuan yang telah ditetapkan meskipun menghadapi berbagai tantangan teknis selama implementasi.

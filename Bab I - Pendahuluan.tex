@@ -5,34 +5,63 @@
 \label{chap:pendahuluan}
 % --- Latar Belakang ---
 \section{Latar Belakang}
-Latar Belakang menjelaskan dasar pemikiran, motivasi, kebutuhan, alasan, atau urgensi pemilihan masalah tugas akhir. Subbab ini berisi penjelasan ringkas tentang kondisi atau situasi yang ada saat ini terkait dengan topik yang dibahas. Tujuan utamanya adalah untuk memberikan informasi secukupnya kepada pembaca agar memahami topik yang akan dibahas. Dalam subbab ini, jelaskan hal-hal berikut ini:
-\begin{enumerate}
-\item	Kondisi atau situasi topik yang dibahas beserta permasalahannya, misalnya tentang pengelolaan informasi di puskesmas daerah pedesaan dan masalah yang dihadapi.
-\item	Berbagai solusi yang telah diterapkan atau solusi yang tersedia dan memungkinkan untuk diterapkan untuk menyelesaikan masalah tersebut.
-\end{enumerate}
+Di era transformasi digital, digitalisasi dokumen menjadi kebutuhan fundamental untuk meningkatkan efisiensi operasional dan mendukung keberlanjutan. Sistem manajemen dokumen sangat penting karena pengelolaan dokumen fisik menimbulkan inefisiensi signifikan, misalnya pemborosan waktu. Karyawan dapat menghabiskan 30 hingga 40\% waktu kerja mereka hanya untuk mencari berkas \autocite{xiong2021sustainable}. Selain itu, ada risiko kehilangan atau kerusakan dokumen fisik yang tinggi. Sebaliknya, dokumen digital menawarkan keamanan yang lebih baik dan kemudahan pencarian \autocite{fleischhacker2025enhancing}.
+
+Namun, pemindaian konvensional hanya menghasilkan gambar statis seperti JPEG, PNG, dan PDF berbasis gambar yang tidak dapat dicari maupun diekstrak datanya. Untuk mengatasi keterbatasan ini, diperlukan teknologi yang mampu mengenali isi dan struktur dokumen secara akurat \autocite{sinha2025digitization}. \textit{Optical Character Recognition} (OCR) adalah teknologi kunci yang mengonversi gambar dokumen menjadi teks yang dapat dicari dan diekstrak, didorong oleh kemajuan dalam \textit{deep learning} \autocite{li2025printed}. Selain ekstraksi teks, pemahaman terhadap \textit{layout} dokumen juga sangat penting. \textit{Document Layout Analysis} (DLA) berperan dalam memahami struktur dan susunan elemen visual dalam dokumen, seperti deteksi teks, tabel, dan gambar \autocite{chen2025graphbased}. Integrasi antara OCR dan DLA inilah yang membentuk \textit{pipeline document parsing}.
+
+Saat ini, telah tersedia berbagai \textit{pipeline document parsing} yang mengintegrasikan OCR dan DLA untuk menghasilkan dokumen digital yang dapat dicari dan diekstrak. Namun, meskipun \textit{pipeline} tersebut mampu mengekstrak teks dengan baik, tantangan utama masih muncul dalam mempertahankan \textit{layout} dan gaya visual asli dokumen. Banyak sistem cenderung hanya berfokus pada ekstraksi teks, sehingga tata letak asli tidak dipertahankan dengan baik \autocite{pfitzmann2022doclaynet}. Akibatnya, dokumen digital seringkali memerlukan penyuntingan manual untuk memperbaiki posisi elemen dan gaya teks. Kondisi ini membuat sebagian pengguna memilih kembali ke dokumen fisik karena hasil digitalisasi tidak mencerminkan bentuk aslinya \autocite{sternad2023managingdms}.
+
+Oleh karena itu, Tugas Akhir ini bertujuan memanfaatkan \textit{pipeline document parsing} yang sudah ada dengan mengintegrasikannya menggunakan model atau algoritma untuk meningkatkan akurasi rekonstruksi \textit{layout} dan gaya visual. Dengan pendekatan ini, diharapkan dokumen digital yang dihasilkan dapat mempertahankan struktur dan format visual dokumen fisik secara presisi, sehingga dapat berfungsi sebagai pengganti penuh dokumen fisik dan mengatasi keterbatasan sistem digitalisasi yang ada.
+
+
 
 % --- Rumusan Masalah ---
 \section{Rumusan Masalah}
-Rumusan Masalah berisi masalah utama yang dibahas dalam tugas akhir. Rumusan masalah yang baik memiliki struktur sebagai berikut:
+Berdasarkan latar belakang yang telah diuraikan, berikut adalah rumusan masalah yang akan menjadi fokus dalam Tugas Akhir ini.
 \begin{enumerate}
-\item	Pokok persoalan dari kondisi atau situasi yang ada saat ini. Dengan kata lain, jelaskan kelemahan atau kekurangan dari kondisi, situasi, atau solusi yang dijelaskan pada latar belakang. Ini merupakan pokok rumusan masalah.
-\item	Elaborasi lebih lanjut urgensi penyelesaian masalah tersebut (mengapa penting untuk diselesaikan dan akibat yang dapat terjadi jika tidak diselesaikan).
-\item	Usulan singkat terkait dengan solusi yang ditawarkan untuk menyelesaikan persoalan.
-Penting untuk diperhatikan bahwa persoalan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan di bab Evaluasi (apakah terselesaikan atau tidak).
+	\item Bagaimana memanfaatkan \textit{pipeline document parsing} yang sudah ada untuk melakukan rekonstruksi dokumen fisik ke format digital?
+	\item Model atau algoritma apa yang dapat ditambahkan untuk meningkatkan akurasi rekonstruksi \textit{layout} dan gaya visual dokumen?
 \end{enumerate}
 
 % --- Tujuan ---
 \section{Tujuan}
-Tuliskan tujuan utama dan/atau tujuan detail yang akan dicapai dalam pelaksanaan tugas akhir. Fokuskan pada hasil akhir yang ingin diperoleh setelah tugas akhir diselesaikan, terkait dengan penyelesaian persoalan pada rumusan masalah. Penting untuk diperhatikan bahwa tujuan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan di akhir pelaksanaan tugas akhir apakah tercapai atau tidak. Tuliskan kriteria keberhasilan tugas akhir ini.
+Tujuan dari Tugas Akhir ini adalah memanfaatkan \textit{pipeline document parsing} yang sudah ada untuk menghasilkan dokumen digital dari dokumen fisik dengan mempertahankan \textit{layout} dan gaya visual asli. Sistem yang dikembangkan tidak hanya mengekstraksi teks secara akurat, tetapi juga merekonstruksi struktur dokumen dengan memastikan penempatan elemen dan gaya teks sesuai dengan dokumen fisik aslinya. Dengan demikian, dokumen digital yang dihasilkan dapat berfungsi sebagai pengganti penuh dokumen fisik tanpa memerlukan penyuntingan manual yang signifikan.
 
 % --- Batasan Masalah ---
 \section{Batasan Masalah}
-Tuliskan batasan-batasan yang diambil dalam pelaksanaan tugas akhir. Batasan ini dapat dihindari (bersifat opsional, tidak perlu ada) jika topik atau judul tugas akhir dibuat cukup spesifik.
+
+Bagian ini menyajikan batasan masalah yang digunakan untuk memperjelas ruang lingkup pembahasan dalam Tugas Akhir ini.
+
+\begin{enumerate}
+	\item Jenis dokumen yang diproses dibatasi pada dokumen fisik berbahasa Indonesia dengan struktur 1 kolom.
+	\item Dokumen fisik hanya berisi tabel sederhana, yaitu data yang tersusun rapi dalam baris dan kolom.
+	\item Akurasi rekonstruksi dokumen bergantung pada kualitas deteksi dan klasifikasi elemen dokumen yang dihasilkan oleh \textit{pipeline document parsing} yang digunakan.
+	\item Ukuran dokumen fisik yang dapat diproses dibatasi pada ukuran A4.
+	\item Gambar dokumen yang digunakan harus memiliki metadata \textit{dots per inch} (dpi) sebagai satuan resolusi pemindaian yang memadai agar teks dan elemen visual dapat terdeteksi dengan jelas.
+	\item Sistem tidak dirancang untuk mengenali atau memproses dokumen yang mengalami kerusakan berat, memiliki orientasi terbalik, buram, atau tercoret secara signifikan.
+	\item Format dokumen digital yang dihasilkan dibatasi pada format PDF.
+\end{enumerate}
+
+
+
 
 % --- Metodologi Pengerjaan TA ---
 \section{Metodologi}
-Tuliskan semua tahapan yang akan dilalui selama pelaksanaan tugas akhir. Tahapan ini spesifik untuk menyelesaikan persoalan tugas akhir. Khusus untuk penyusunan proposal ini, jelaskan secara detail:
+Metodologi dalam Tugas Akhir ini mencakup lima tahapan utama, yakni eksplorasi, perancangan, implementasi, pengujian, dan evaluasi. Alur Tugas Akhir ini pada dasarnya berjalan secara berurutan. Namun, untuk memastikan hasil yang optimal, diterapkan mekanisme iteratif. Apabila hasil pada tahap pengujian belum memuaskan, proses dapat diulang kembali. Iterasi ini umumnya dilakukan mulai dari tahap perancangan dan implementasi, namun tidak menutup kemungkinan pengulangan kembali ke tahap eksplorasi jika metode atau teknologi yang dipilih terbukti tidak memadai.
+
 \begin{enumerate}
-\item	Tahapan investigasi pengumpulan fakta di latar belakang untuk merumuskan masalah.
-\item	Langkah-langkah pencarian, pengelompokan, dan penapisan literatur atau sumber informasi untuk mengumpulkan informasi yang relevan tentang topik yang diangkat, termasuk teori (konsep atau teori apa saja yang perlu dicari), hal-hal yang telah dicapai oleh orang lain (cara mencari dan kata kuncinya), dan berbagai informasi pendukung, untuk mencari solusi terhadap masalah yang dibahas. Gunakan metodologi yang tepat dalam menggali informasi dan dokumentasikan prosesnya (termasuk rekaman wawancara atau survei) di dalam Lampiran, termasuk tautan ke video atau foto. Hasil penggalian informasi ini akan dijelaskan secara sistematis di Bab II Studi Literatur.
+	\item Eksplorasi
+	\par Tahap ini mencakup eksplorasi terhadap \textit{pipeline document parsing} yang tersedia dan mampu mengintegrasikan OCR dengan DLA. Dilakukan analisis terhadap berbagai \textit{pipeline} untuk memilih solusi yang dapat mengekstraksi teks, mendeteksi elemen dokumen, serta memberikan informasi \textit{layout} yang diperlukan untuk rekonstruksi. Selain itu, dilakukan kajian terhadap model atau algoritma tambahan yang dapat meningkatkan akurasi rekonstruksi \textit{layout} dan gaya visual dokumen.
+	
+	\item Perancangan
+	\par Setelah \textit{pipeline document parsing} dipilih, disusun arsitektur sistem yang memanfaatkan keluaran \textit{pipeline} tersebut untuk melakukan rekonstruksi dokumen. Perancangan mencakup integrasi \textit{pipeline document parsing} yang dipilih dengan model atau algoritma tambahan yang diperlukan untuk meningkatkan presisi rekonstruksi.
+	
+	\item Implementasi
+	\par Pada tahap ini, rancangan sistem direalisasikan melalui pengembangan program yang memproses dokumen fisik menggunakan \textit{pipeline document parsing} yang telah dipilih. Sistem mengekstraksi informasi teks, \textit{layout}, dan gaya visual dari keluaran \textit{pipeline}, kemudian merekonstruksi dokumen ke format digital dengan mempertahankan posisi elemen dan gaya teks sesuai dokumen fisik asli.
+	
+	\item Pengujian
+	\par Pengujian dilakukan dengan membandingkan dokumen digital hasil rekonstruksi terhadap dokumen fisik asli. Evaluasi mencakup akurasi \textit{layout} dan akurasi gaya visual. Jika performa belum optimal, proses iteratif dilakukan dengan mengulang tahapan sebelumnya untuk meningkatkan kualitas rekonstruksi.
+	
+	\item Evaluasi
+	\par Evaluasi meninjau hasil pengujian secara menyeluruh untuk menilai kemampuan sistem dalam mempertahankan \textit{layout} dan gaya visual dokumen fisik pada hasil dokumen digital. Evaluasi juga menganalisis keterbatasan sistem dan memberikan rekomendasi perbaikan. Temuan ini digunakan untuk menyimpulkan tingkat keberhasilan sistem dalam merekonstruksi dokumen secara akurat dan kesesuaiannya sebagai pengganti dokumen fisik.
 \end{enumerate}
